@@ -1,0 +1,93 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.tracker.model;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+import edu.ncsu.csc216.tracker.requirement.Command;
+import edu.ncsu.csc216.tracker.requirement.Requirement;
+import edu.ncsu.csc216.tracker.xml.Req;
+
+/**
+ * A container class that holds a list of Requirement objects.  Has functionality
+ * to add/remove Requirements, search for a Requirement, update a Requirement,
+ * and the ability to return a list or sublist of Requirements contained in the RequirementList
+ * 
+ * @author Zach Giles
+ *
+ */
+public class RequirementsList {
+	private RequirementsTrackerModel reqList;
+
+	/**
+	 * Creates an empty RequirementsList
+	 */
+	public RequirementsList() {
+		LinkedList<Requirement> reqs = new LinkedList<Requirement>();
+		Requirement.setCounter(0);
+		
+	}
+	/**
+	 * Adds a Requirement
+	 * @param summary the Requirement summary
+	 * @param acceptanceTestId the Requirement acceptance test id
+	 * @return int the Requirement id
+	 */
+	public int addRequirement(String summary, String acceptanceTestId) {
+		reqList.addRequirement(summary, acceptanceTestId);
+		
+			
+			}
+		}
+	}
+	/**
+	 * Adds Requirements from XML data
+	 * @param reqList a List of Requirements in XML format
+	 */
+	public void addXMLReqs(List<Req> reqList) {
+		int listCounter = 0;
+		for (int i = 0; i < reqList.size(); i++) {
+			this.reqList.addRequirement(reqList.get(i).getSummary(), reqList.get(i).getTest());
+			if (reqList.get(i).getId() > listCounter) {
+				listCounter = reqList.get(i).getId() + 1;
+			}
+		}
+		Requirement.setCounter(listCounter);
+	}
+	/**
+	 * Gets a the Requirements in the RequirementsList
+	 * @return a List of Requirement Objects
+	 */
+	public List<Requirement> getRequirements() {
+		List<Requirement> list = new ArrayList<Requirement>();
+		return list;
+		
+	}
+	/**
+	 * Gets a Requirement object from the RequirementsList by its unique ID
+	 * @param id the unique ID of the Requirement Object you want to get
+	 * @return The Requirement Object with the inputed id
+	 */
+	public Requirement getRequirementById(int id) {
+		return null;
+	}
+	/**
+	 * Modifies a Requirement in the RequirementsList by executing a Command on the Requirement
+	 * @param id Id of Requirement you want to execute the Command on
+	 * @param c Command/State change you want to execute
+	 */
+	public void executeCommand(int id, Command c) {
+		
+	}
+	/**
+	 * Deletes a Requirement from the RequirementsList
+	 * @param id Unique ID of the Requirement you want to delete
+	 */
+	public void deleteRequirementById(int id) {
+		
+	}
+	
+}

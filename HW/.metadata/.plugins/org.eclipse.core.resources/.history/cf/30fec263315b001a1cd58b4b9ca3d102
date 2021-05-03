@@ -1,0 +1,19 @@
+
+/**
+ *INSERT PROJECT DESCRIPTION
+ *
+ * @author Zach Giles
+ *
+ * @version 60Feb2020
+ */
+public class HamletDouble {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

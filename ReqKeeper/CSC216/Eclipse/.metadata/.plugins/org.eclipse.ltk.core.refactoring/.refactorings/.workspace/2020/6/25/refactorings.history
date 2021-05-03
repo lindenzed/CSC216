@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;ReqKeeper&apos; to &apos;ReqKeeper_Test&apos;" description="Rename resource &apos;ReqKeeper&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ReqKeeper" name="ReqKeeper_Test" stamp="1592313475400" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;ReqKeeper&apos; to &apos;Project1&apos;" description="Rename resource &apos;ReqKeeper&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ReqKeeper" name="Project1" stamp="1592531501547" updateReferences="true"/>
+</session>

@@ -1,0 +1,43 @@
+import java.util.*;
+/**
+ *Uses Pythagorean Theorem to calculate length of
+ *triangle given the other two sides.
+ *
+ * @author Zach Giles
+ *
+ * @version 21Jan2020
+ */
+public class HW {
+    public static void main (String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.print("How many names: ");
+        int n = console.nextInt();
+        longestName(console, n);
+    }
+    public static void longestName(Scanner console, int n) {
+        System.out.print("name #1? ");
+        String comparison = console.next();
+        String newName = "";
+        int tieFlag=0;
+        for (int i = 2; i <= n; i++) {
+            System.out.print("name #" + i +"? ");
+            newName = console.next();
+            if (newName.length() == comparison.length()) {
+                tieFlag =1;
+            }
+            if (newName.length() > comparison.length()) {
+                comparison = newName;
+                tieFlag = 0;
+            }
+        }
+        String firstLetter = comparison.substring(0, 1);
+        firstLetter = firstLetter.toUpperCase();
+        String remainingLetters = comparison.substring(1);
+        remainingLetters = remainingLetters.toLowerCase();
+        comparison = firstLetter + remainingLetters +"'s name is longest";
+        if (tieFlag == 1) {
+            comparison = comparison + "\n(There was a tie!)";
+        }
+        System.out.print(comparison);
+    }
+}

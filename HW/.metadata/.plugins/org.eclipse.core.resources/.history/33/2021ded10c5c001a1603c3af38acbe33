@@ -1,0 +1,45 @@
+import java.util.*;
+import java.io.*;
+/**
+ *INSERT PROJECT DESCRIPTION
+ *
+ * @author Zach Giles
+ *
+ * @version 61Mar2020
+ */
+public class ValidateCheckDigits {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        userInterface();
+
+    }
+    
+    public static void userInterface() {
+        Scanner console = new Scanner(System.in);
+        Scanner fileScanner = new Scanner(new getUserInput(console));
+    }
+    
+    public static File getUserInput(Scanner console) {
+        File fileName = null;
+        while (fileName == null) {
+            System.out.print("Enter file with possible account numbers: ");
+            try {
+                fileName = new File(console.next());
+            }
+            catch (FileNotFoundException e) {
+                System.out.print("File not found!  Please enter a valid file name. ");
+            }
+        }
+        return fileName;
+    }
+    
+    public static PrintStream processFile(Scanner fileScanner) {
+        try {
+            PrintStream output = new PrintStream(new File())
+        }
+    }
+
+}

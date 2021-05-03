@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.3" sequence="1" timestamp="1592924894551" analysisTimestamp="1592924893979" release="">
+  <Project projectName="WolfScheduler">
+    <Jar>C:\Users\zachs\git\csc216-651-L-18\WolfScheduler\bin</Jar>
+    <AuxClasspathEntry>C:\Users\zachs\git\csc216-651-L-18\WolfScheduler\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jdk-11.0.5\lib\jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\zachs\git\csc216-651-L-18\WolfScheduler\test</SrcDir>
+    <SrcDir>C:\Users\zachs\git\csc216-651-L-18\WolfScheduler\src</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 23 Jun 2020 11:08:13 -0400" total_classes="0" referenced_classes="0" total_bugs="0" total_size="0" num_packages="0" java_version="11.0.5" vm_version="11.0.5+10-LTS" cpu_seconds="1.61" clock_seconds="0.57" peak_mbytes="408.83" alloc_mbytes="1024.00" gc_seconds="0.02">
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="284" invocations="153" avgMicrosecondsPerInvocation="1862" maxMicrosecondsPerInvocation="44600" standardDeviationMicrosecondsPerInvocation="4627"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="229" invocations="2" avgMicrosecondsPerInvocation="114745" maxMicrosecondsPerInvocation="215772" standardDeviationMicrosecondsPerInvocation="101027"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1592924894551" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

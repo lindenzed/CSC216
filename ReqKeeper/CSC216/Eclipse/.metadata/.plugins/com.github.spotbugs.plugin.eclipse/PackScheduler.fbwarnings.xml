@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.3" sequence="1" timestamp="1611173667424" analysisTimestamp="1611173649237" release="">
+  <Project projectName="PackScheduler">
+    <Jar>C:\Users\zachs\git\csc216-651-L-18\PackScheduler\bin</Jar>
+    <AuxClasspathEntry>C:\Users\zachs\git\csc216-651-L-18\PackScheduler\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\git\csc216-651-L-18\PackScheduler\lib\CSC216Collections.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jdk-11.0.5\lib\jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\zachs\git\csc216-651-L-18\PackScheduler\test</SrcDir>
+    <SrcDir>C:\Users\zachs\git\csc216-651-L-18\PackScheduler\src</SrcDir>
+  </Project>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalogTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalogTest" sourcefile="CourseCatalogTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/catalog/CourseCatalogTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalogTest" name="invalidTestFile" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalogTest" sourcefile="CourseCatalogTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/catalog/CourseCatalogTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalogTest" start="24" end="24" startBytecode="13" endBytecode="13" sourcefile="CourseCatalogTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/catalog/CourseCatalogTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalogTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalogTest" sourcefile="CourseCatalogTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/catalog/CourseCatalogTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalogTest" name="validTestFile" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalogTest" sourcefile="CourseCatalogTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/catalog/CourseCatalogTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalogTest" start="22" end="22" startBytecode="7" endBytecode="7" sourcefile="CourseCatalogTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/catalog/CourseCatalogTest.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.ActivityTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.ActivityTest" sourcefile="ActivityTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/ActivityTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.course.ActivityTest" name="testActivtyTime" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.ActivityTest" start="113" end="146" startBytecode="0" endBytecode="66" sourcefile="ActivityTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/ActivityTest.java"/>
+    </Method>
+    <LocalVariable name="a1" register="1" pc="130" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.ActivityTest" start="140" end="140" startBytecode="129" endBytecode="129" sourcefile="ActivityTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/ActivityTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.ActivityTest" start="140" end="140" startBytecode="129" endBytecode="129" sourcefile="ActivityTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/ActivityTest.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="a1"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest" sourcefile="CourseRollTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/roll/CourseRollTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest" name="testCourseRoll" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest" start="41" end="52" startBytecode="0" endBytecode="42" sourcefile="CourseRollTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/roll/CourseRollTest.java"/>
+    </Method>
+    <LocalVariable name="roll" register="2" pc="73" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest" start="47" end="47" startBytecode="72" endBytecode="72" sourcefile="CourseRollTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/roll/CourseRollTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest" start="47" end="47" startBytecode="72" endBytecode="72" sourcefile="CourseRollTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/roll/CourseRollTest.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="roll"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest" sourcefile="CourseRollTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/roll/CourseRollTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest" name="testSetEnrollmentCap" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest" start="60" end="131" startBytecode="0" endBytecode="1434" sourcefile="CourseRollTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/roll/CourseRollTest.java"/>
+    </Method>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRoll" name="getEnrollmentCap" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRoll" start="84" end="84" startBytecode="0" endBytecode="46" sourcefile="CourseRoll.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/roll/CourseRoll.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest" start="63" end="63" startBytecode="29" endBytecode="29" sourcefile="CourseRollTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/roll/CourseRollTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest" start="63" end="63" startBytecode="29" endBytecode="29" sourcefile="CourseRollTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/roll/CourseRollTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" name="stateD" signature="I" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" start="28" end="28" startBytecode="31" endBytecode="31" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" name="stateDD" signature="I" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" start="31" end="31" startBytecode="37" endBytecode="37" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" name="stateDDD" signature="I" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" start="34" end="34" startBytecode="43" endBytecode="43" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" name="stateInitial" signature="I" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" start="13" end="13" startBytecode="6" endBytecode="6" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" name="stateL" signature="I" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" start="16" end="16" startBytecode="11" endBytecode="11" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" name="stateLL" signature="I" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" start="19" end="19" startBytecode="16" endBytecode="16" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" name="stateLLL" signature="I" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" start="22" end="22" startBytecode="21" endBytecode="21" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" name="stateLLLL" signature="I" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" start="25" end="25" startBytecode="26" endBytecode="26" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" name="stateSuffix" signature="I" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" start="37" end="37" startBytecode="49" endBytecode="49" sourcefile="CourseNameValidatorFSM.java" sourcepath="edu/ncsu/csc216/pack_scheduler/course/validator/CourseNameValidatorFSM.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory" sourcefile="FacultyDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/FacultyDirectory.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory" name="addFaculty" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory" start="81" end="112" startBytecode="0" endBytecode="540" sourcefile="FacultyDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/FacultyDirectory.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="614" end="615" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory" start="89" end="89" startBytecode="74" endBytecode="74" sourcefile="FacultyDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/FacultyDirectory.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory" start="89" end="89" startBytecode="74" endBytecode="74" sourcefile="FacultyDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/FacultyDirectory.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory" sourcefile="FacultyDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/FacultyDirectory.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory" name="addFaculty" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory" start="81" end="112" startBytecode="0" endBytecode="540" sourcefile="FacultyDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/FacultyDirectory.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="981" end="981" startBytecode="0" endBytecode="53" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory" start="88" end="88" startBytecode="59" endBytecode="59" sourcefile="FacultyDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/FacultyDirectory.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory" start="88" end="88" startBytecode="59" endBytecode="59" sourcefile="FacultyDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/FacultyDirectory.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory" sourcefile="StudentDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectory.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory" name="addStudent" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory" start="73" end="104" startBytecode="0" endBytecode="540" sourcefile="StudentDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectory.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="614" end="615" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory" start="81" end="81" startBytecode="74" endBytecode="74" sourcefile="StudentDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectory.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory" start="81" end="81" startBytecode="74" endBytecode="74" sourcefile="StudentDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectory.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory" sourcefile="StudentDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectory.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory" name="addStudent" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory" start="73" end="104" startBytecode="0" endBytecode="540" sourcefile="StudentDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectory.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="981" end="981" startBytecode="0" endBytecode="53" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory" start="80" end="80" startBytecode="59" endBytecode="59" sourcefile="StudentDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectory.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory" start="80" end="80" startBytecode="59" endBytecode="59" sourcefile="StudentDirectory.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectory.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest" sourcefile="StudentDirectoryTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectoryTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest" name="checkFiles" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest" start="156" end="168" startBytecode="0" endBytecode="247" sourcefile="StudentDirectoryTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectoryTest.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="566" end="567" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest" start="156" end="156" startBytecode="12" endBytecode="12" sourcefile="StudentDirectoryTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectoryTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest" start="156" end="156" startBytecode="12" endBytecode="12" sourcefile="StudentDirectoryTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectoryTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest" sourcefile="StudentDirectoryTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectoryTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest" name="validTestFile" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest" sourcefile="StudentDirectoryTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectoryTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest" start="22" end="22" startBytecode="7" endBytecode="7" sourcefile="StudentDirectoryTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/directory/StudentDirectoryTest.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO" sourcefile="CourseRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIO.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO" name="readCourseRecords" signature="(Ljava/lang/String;)Ledu/ncsu/csc216/collections/list/SortedList;" isStatic="true">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO" start="38" end="61" startBytecode="0" endBytecode="392" sourcefile="CourseRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIO.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="566" end="567" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO" start="39" end="39" startBytecode="21" endBytecode="21" sourcefile="CourseRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIO.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO" start="39" end="39" startBytecode="21" endBytecode="21" sourcefile="CourseRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIO.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO" sourcefile="CourseRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIO.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO" name="writeCourseRecords" signature="(Ljava/lang/String;Ledu/ncsu/csc216/collections/list/SortedList;)V" isStatic="true">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO" start="113" end="118" startBytecode="0" endBytecode="177" sourcefile="CourseRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIO.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="327" end="328" startBytecode="0" endBytecode="69" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO" start="113" end="113" startBytecode="12" endBytecode="12" sourcefile="CourseRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIO.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO" start="113" end="113" startBytecode="12" endBytecode="12" sourcefile="CourseRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIO.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" name="checkFiles" signature="(Ljava/lang/String;Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="120" end="132" startBytecode="0" endBytecode="247" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="639" end="640" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="120" end="120" startBytecode="12" endBytecode="12" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="120" end="120" startBytecode="12" endBytecode="12" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" name="invalidTestFile" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="29" end="29" startBytecode="13" endBytecode="13" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" name="validCourse1" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="33" end="33" startBytecode="19" endBytecode="19" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" name="validCourse2" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="34" end="34" startBytecode="25" endBytecode="25" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" name="validCourse3" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="35" end="35" startBytecode="31" endBytecode="31" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" name="validCourse5" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="38" end="38" startBytecode="37" endBytecode="37" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" name="validCourse6" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="39" end="39" startBytecode="43" endBytecode="43" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" name="validCourse7" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="40" end="40" startBytecode="49" endBytecode="49" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" name="validCourse8" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="41" end="41" startBytecode="55" endBytecode="55" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" name="validCourse9" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="42" end="42" startBytecode="61" endBytecode="61" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" name="validTestFile" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" start="27" end="27" startBytecode="7" endBytecode="7" sourcefile="CourseRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/CourseRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO" sourcefile="FacultyRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIO.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO" name="readFacultyRecords" signature="(Ljava/lang/String;)Ledu/ncsu/csc216/pack_scheduler/util/LinkedList;" isStatic="true">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO" start="36" end="57" startBytecode="0" endBytecode="351" sourcefile="FacultyRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIO.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="566" end="567" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO" start="36" end="36" startBytecode="12" endBytecode="12" sourcefile="FacultyRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIO.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO" start="36" end="36" startBytecode="12" endBytecode="12" sourcefile="FacultyRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIO.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO" sourcefile="FacultyRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIO.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO" name="writeFacultyRecords" signature="(Ljava/lang/String;Ledu/ncsu/csc216/pack_scheduler/util/LinkedList;)V" isStatic="true">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO" start="94" end="99" startBytecode="0" endBytecode="177" sourcefile="FacultyRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIO.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="327" end="328" startBytecode="0" endBytecode="69" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO" start="94" end="94" startBytecode="12" endBytecode="12" sourcefile="FacultyRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIO.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO" start="94" end="94" startBytecode="12" endBytecode="12" sourcefile="FacultyRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIO.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" name="testReadFacultyRecords" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="27" end="35" startBytecode="0" endBytecode="15" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    </Method>
+    <LocalVariable name="output" register="1" pc="8" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="27" end="27" startBytecode="7" endBytecode="7" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="27" end="27" startBytecode="7" endBytecode="7" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="output"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" name="testWriteFacultyRecords" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="42" end="58" startBytecode="0" endBytecode="37" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    </Method>
+    <LocalVariable name="output" register="1" pc="8" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="42" end="42" startBytecode="7" endBytecode="7" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="42" end="42" startBytecode="7" endBytecode="7" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="output"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" name="testWriteFacultyRecords" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="42" end="58" startBytecode="0" endBytecode="276" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="639" end="640" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="46" end="46" startBytecode="33" endBytecode="33" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="46" end="46" startBytecode="33" endBytecode="33" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="2" rank="17" abbrev="REC" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" name="testWriteFacultyRecords" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="42" end="58" startBytecode="0" endBytecode="276" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="55" end="55" startBytecode="72" endBytecode="72" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" start="55" end="55" startBytecode="72" endBytecode="72" sourcefile="FacultyRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/FacultyRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO" sourcefile="StudentRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIO.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO" name="readStudentRecords" signature="(Ljava/lang/String;)Ledu/ncsu/csc216/collections/list/SortedList;" isStatic="true">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO" start="32" end="53" startBytecode="0" endBytecode="351" sourcefile="StudentRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIO.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="566" end="567" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO" start="32" end="32" startBytecode="12" endBytecode="12" sourcefile="StudentRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIO.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO" start="32" end="32" startBytecode="12" endBytecode="12" sourcefile="StudentRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIO.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO" sourcefile="StudentRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIO.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO" name="writeStudentRecords" signature="(Ljava/lang/String;Ledu/ncsu/csc216/collections/list/SortedList;)V" isStatic="true">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO" start="90" end="95" startBytecode="0" endBytecode="177" sourcefile="StudentRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIO.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="327" end="328" startBytecode="0" endBytecode="69" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO" start="90" end="90" startBytecode="12" endBytecode="12" sourcefile="StudentRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIO.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO" start="90" end="90" startBytecode="12" endBytecode="12" sourcefile="StudentRecordIO.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIO.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIOTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIOTest" sourcefile="StudentRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIOTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIOTest" name="testInputOutput" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIOTest" start="38" end="83" startBytecode="0" endBytecode="622" sourcefile="StudentRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIOTest.java"/>
+    </Method>
+    <Method classname="java.io.PrintStream" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.PrintStream" start="327" end="328" startBytecode="0" endBytecode="69" sourcefile="PrintStream.java" sourcepath="java/io/PrintStream.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIOTest" start="59" end="59" startBytecode="135" endBytecode="135" sourcefile="StudentRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIOTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIOTest" start="59" end="59" startBytecode="135" endBytecode="135" sourcefile="StudentRecordIOTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/io/StudentRecordIOTest.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" name="hashPW" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="81" end="85" startBytecode="0" endBytecode="144" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="614" end="615" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="83" end="83" startBytecode="22" endBytecode="22" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="83" end="83" startBytecode="22" endBytecode="22" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" name="hashPW" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="81" end="85" startBytecode="0" endBytecode="144" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="981" end="981" startBytecode="0" endBytecode="53" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="82" end="82" startBytecode="8" endBytecode="8" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="82" end="82" startBytecode="8" endBytecode="8" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" name="login" signature="(Ljava/lang/String;Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="130" end="176" startBytecode="0" endBytecode="593" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="614" end="615" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="138" end="138" startBytecode="45" endBytecode="45" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="138" end="138" startBytecode="45" endBytecode="45" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" name="login" signature="(Ljava/lang/String;Ljava/lang/String;)Z" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="130" end="176" startBytecode="0" endBytecode="593" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="981" end="981" startBytecode="0" endBytecode="53" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="137" end="137" startBytecode="31" endBytecode="31" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" start="137" end="137" startBytecode="31" endBytecode="31" sourcefile="RegistrationManager.java" sourcepath="edu/ncsu/csc216/pack_scheduler/manager/RegistrationManager.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.ui.FacultyDirectoryPanel">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.FacultyDirectoryPanel" sourcefile="FacultyDirectoryPanel.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/FacultyDirectoryPanel.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.ui.FacultyDirectoryPanel" name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.FacultyDirectoryPanel" start="222" end="309" startBytecode="0" endBytecode="1294" sourcefile="FacultyDirectoryPanel.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/FacultyDirectoryPanel.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.FacultyDirectoryPanel" start="269" end="269" startBytecode="273" endBytecode="273" sourcefile="FacultyDirectoryPanel.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/FacultyDirectoryPanel.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.ui.FacultySchedulePanel$StudentTableModel">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.FacultySchedulePanel$StudentTableModel" start="426" end="500" sourcefile="FacultySchedulePanel.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/FacultySchedulePanel.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="1" rank="15" abbrev="ST" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI" sourcefile="PackSchedulerGUI.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/PackSchedulerGUI.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI" start="59" end="84" startBytecode="0" endBytecode="357" sourcefile="PackSchedulerGUI.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/PackSchedulerGUI.java"/>
+    </Method>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI" name="gui" signature="Ljavax/swing/JFrame;" isStatic="true">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI" sourcefile="PackSchedulerGUI.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/PackSchedulerGUI.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI" start="60" end="60" startBytecode="11" endBytecode="11" sourcefile="PackSchedulerGUI.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/PackSchedulerGUI.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI" start="60" end="60" startBytecode="11" endBytecode="11" sourcefile="PackSchedulerGUI.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/PackSchedulerGUI.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.ui.StudentDirectoryPanel">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.StudentDirectoryPanel" sourcefile="StudentDirectoryPanel.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/StudentDirectoryPanel.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.ui.StudentDirectoryPanel" name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.StudentDirectoryPanel" start="217" end="304" startBytecode="0" endBytecode="1286" sourcefile="StudentDirectoryPanel.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/StudentDirectoryPanel.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.ui.StudentDirectoryPanel" start="264" end="264" startBytecode="263" endBytecode="263" sourcefile="StudentDirectoryPanel.java" sourcepath="edu/ncsu/csc216/pack_scheduler/ui/StudentDirectoryPanel.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" name="setup" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" start="49" end="55" startBytecode="0" endBytecode="146" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="614" end="615" startBytecode="0" endBytecode="64" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" start="51" end="51" startBytecode="23" endBytecode="23" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" start="51" end="51" startBytecode="23" endBytecode="23" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" name="setup" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" start="49" end="55" startBytecode="0" endBytecode="146" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="981" end="981" startBytecode="0" endBytecode="53" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" start="50" end="50" startBytecode="9" endBytecode="9" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" start="50" end="50" startBytecode="9" endBytecode="9" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" name="setup" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" start="49" end="55" startBytecode="0" endBytecode="146" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+    </Method>
+    <Field classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" name="hashedPassWord" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" start="51" end="51" startBytecode="26" endBytecode="26" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.user.StudentTest" start="51" end="51" startBytecode="26" endBytecode="26" sourcefile="StudentTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/user/StudentTest.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.util.ArrayListTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.ArrayListTest" sourcefile="ArrayListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/ArrayListTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.util.ArrayListTest" name="testGetInt" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.ArrayListTest" start="143" end="185" startBytecode="0" endBytecode="536" sourcefile="ArrayListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/ArrayListTest.java"/>
+    </Method>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.util.ArrayList" name="get" signature="(I)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.ArrayList" start="62" end="66" startBytecode="0" endBytecode="140" sourcefile="ArrayList.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/ArrayList.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.ArrayListTest" start="146" end="146" startBytecode="10" endBytecode="10" sourcefile="ArrayListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/ArrayListTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.ArrayListTest" start="146" end="146" startBytecode="10" endBytecode="10" sourcefile="ArrayListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/ArrayListTest.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.util.LinkedAbstractListTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedAbstractListTest" sourcefile="LinkedAbstractListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedAbstractListTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.util.LinkedAbstractListTest" name="testGetInt" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedAbstractListTest" start="175" end="217" startBytecode="0" endBytecode="538" sourcefile="LinkedAbstractListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedAbstractListTest.java"/>
+    </Method>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.util.LinkedAbstractList" name="get" signature="(I)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedAbstractList" start="232" end="254" startBytecode="0" endBytecode="260" sourcefile="LinkedAbstractList.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedAbstractList.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedAbstractListTest" start="178" end="178" startBytecode="12" endBytecode="12" sourcefile="LinkedAbstractListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedAbstractListTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedAbstractListTest" start="178" end="178" startBytecode="12" endBytecode="12" sourcefile="LinkedAbstractListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedAbstractListTest.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListRecursiveTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListRecursiveTest" sourcefile="LinkedListRecursiveTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedListRecursiveTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListRecursiveTest" name="testGet" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListRecursiveTest" start="216" end="237" startBytecode="0" endBytecode="315" sourcefile="LinkedListRecursiveTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedListRecursiveTest.java"/>
+    </Method>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListRecursive" name="get" signature="(I)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListRecursive" start="113" end="122" startBytecode="0" endBytecode="137" sourcefile="LinkedListRecursive.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedListRecursive.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListRecursiveTest" start="225" end="225" startBytecode="60" endBytecode="60" sourcefile="LinkedListRecursiveTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedListRecursiveTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListRecursiveTest" start="225" end="225" startBytecode="60" endBytecode="60" sourcefile="LinkedListRecursiveTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedListRecursiveTest.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListTest">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListTest" sourcefile="LinkedListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedListTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListTest" name="testSet" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListTest" start="171" end="247" startBytecode="0" endBytecode="168" sourcefile="LinkedListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedListTest.java"/>
+    </Method>
+    <LocalVariable name="iter" register="2" pc="358" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListTest" start="240" end="240" startBytecode="357" endBytecode="357" sourcefile="LinkedListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedListTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.pack_scheduler.util.LinkedListTest" start="240" end="240" startBytecode="357" endBytecode="357" sourcefile="LinkedListTest.java" sourcepath="edu/ncsu/csc216/pack_scheduler/util/LinkedListTest.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="iter"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 20 Jan 2021 15:14:03 -0500" total_classes="93" referenced_classes="529" total_bugs="57" total_size="7859" num_packages="12" java_version="11.0.5" vm_version="11.0.5+10-LTS" cpu_seconds="62.28" clock_seconds="18.26" peak_mbytes="553.48" alloc_mbytes="1024.00" gc_seconds="0.86" priority_2="34" priority_1="23">
+    <PackageStats package="edu.ncsu.csc216.collections.list" total_bugs="0" total_types="1" total_size="211">
+      <ClassStats class="edu.ncsu.csc216.collections.list.SortedListTest" sourceFile="SortedListTest.java" interface="false" size="211" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.pack_scheduler.catalog" total_bugs="2" total_types="2" total_size="171" priority_2="2">
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalog" sourceFile="CourseCatalog.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalogTest" sourceFile="CourseCatalogTest.java" interface="false" size="123" bugs="2" priority_2="2"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.pack_scheduler.course" total_bugs="1" total_types="7" total_size="895" priority_1="1">
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.Activity" sourceFile="Activity.java" interface="false" size="106" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.ActivityTest" sourceFile="ActivityTest.java" interface="false" size="121" bugs="1" priority_1="1"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.Conflict" sourceFile="Conflict.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.ConflictException" sourceFile="ConflictException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.ConflictExceptionTest" sourceFile="ConflictExceptionTest.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.Course" sourceFile="Course.java" interface="false" size="125" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.CourseTest" sourceFile="CourseTest.java" interface="false" size="522" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.pack_scheduler.course.roll" total_bugs="2" total_types="2" total_size="386" priority_2="1" priority_1="1">
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRoll" sourceFile="CourseRoll.java" interface="false" size="105" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.roll.CourseRollTest" sourceFile="CourseRollTest.java" interface="false" size="281" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.pack_scheduler.course.validator" total_bugs="9" total_types="11" total_size="455" priority_2="9">
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidator" sourceFile="CourseNameValidator.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidator$InitialState" sourceFile="CourseNameValidator.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidator$LetterState" sourceFile="CourseNameValidator.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidator$NumberState" sourceFile="CourseNameValidator.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidator$State" sourceFile="CourseNameValidator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidator$SuffixState" sourceFile="CourseNameValidator.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSM" sourceFile="CourseNameValidatorFSM.java" interface="false" size="79" bugs="9" priority_2="9"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorFSMTest" sourceFile="CourseNameValidatorFSMTest.java" interface="false" size="125" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.validator.CourseNameValidatorTest" sourceFile="CourseNameValidatorTest.java" interface="false" size="131" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.validator.InvalidTransitionException" sourceFile="InvalidTransitionException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.course.validator.InvalidTransitionExceptionTest" sourceFile="InvalidTransitionExceptionTest.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.pack_scheduler.directory" total_bugs="6" total_types="4" total_size="350" priority_2="1" priority_1="5">
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectory" sourceFile="FacultyDirectory.java" interface="false" size="68" bugs="2" priority_1="2"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.directory.FacultyDirectoryTest" sourceFile="FacultyDirectoryTest.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory" sourceFile="StudentDirectory.java" interface="false" size="63" bugs="2" priority_1="2"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.directory.StudentDirectoryTest" sourceFile="StudentDirectoryTest.java" interface="false" size="136" bugs="2" priority_2="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.pack_scheduler.io" total_bugs="22" total_types="6" total_size="267" priority_2="13" priority_1="9">
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIO" sourceFile="CourseRecordIO.java" interface="false" size="53" bugs="2" priority_1="2"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.io.CourseRecordIOTest" sourceFile="CourseRecordIOTest.java" interface="false" size="72" bugs="11" priority_2="10" priority_1="1"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIO" sourceFile="FacultyRecordIO.java" interface="false" size="39" bugs="2" priority_1="2"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.io.FacultyRecordIOTest" sourceFile="FacultyRecordIOTest.java" interface="false" size="30" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIO" sourceFile="StudentRecordIO.java" interface="false" size="39" bugs="2" priority_1="2"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.io.StudentRecordIOTest" sourceFile="StudentRecordIOTest.java" interface="false" size="34" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.pack_scheduler.manager" total_bugs="4" total_types="3" total_size="419" priority_1="4">
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager" sourceFile="RegistrationManager.java" interface="false" size="128" bugs="4" priority_1="4"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManager$Registrar" sourceFile="RegistrationManager.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.manager.RegistrationManagerTest" sourceFile="RegistrationManagerTest.java" interface="false" size="287" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.pack_scheduler.ui" total_bugs="4" total_types="26" total_size="2091" priority_2="3" priority_1="1">
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.CourseCatalogPanel" sourceFile="CourseCatalogPanel.java" interface="false" size="363" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.CourseCatalogPanel$CourseCatalogTableModel" sourceFile="CourseCatalogPanel.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.FacultyDirectoryPanel" sourceFile="FacultyDirectoryPanel.java" interface="false" size="212" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.FacultyDirectoryPanel$FacultyDirectoryTableModel" sourceFile="FacultyDirectoryPanel.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.FacultySchedulePanel" sourceFile="FacultySchedulePanel.java" interface="false" size="182" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.FacultySchedulePanel$1" sourceFile="FacultySchedulePanel.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.FacultySchedulePanel$CourseTableModel" sourceFile="FacultySchedulePanel.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.FacultySchedulePanel$StudentTableModel" sourceFile="FacultySchedulePanel.java" interface="false" size="32" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.InstructorAssignmentPanel" sourceFile="InstructorAssignmentPanel.java" interface="false" size="268" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.InstructorAssignmentPanel$1" sourceFile="InstructorAssignmentPanel.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.InstructorAssignmentPanel$2" sourceFile="InstructorAssignmentPanel.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.InstructorAssignmentPanel$3" sourceFile="InstructorAssignmentPanel.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.InstructorAssignmentPanel$4" sourceFile="InstructorAssignmentPanel.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.InstructorAssignmentPanel$CourseCatalogTableModel" sourceFile="InstructorAssignmentPanel.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.InstructorAssignmentPanel$FacultyDirectoryTableModel" sourceFile="InstructorAssignmentPanel.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI" sourceFile="PackSchedulerGUI.java" interface="false" size="39" bugs="1" priority_1="1"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI$FacultyPanel" sourceFile="PackSchedulerGUI.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI$LoginPanel" sourceFile="PackSchedulerGUI.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI$RegistrarPanel" sourceFile="PackSchedulerGUI.java" interface="false" size="85" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.PackSchedulerGUI$StudentPanel" sourceFile="PackSchedulerGUI.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.StudentDirectoryPanel" sourceFile="StudentDirectoryPanel.java" interface="false" size="208" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.StudentDirectoryPanel$StudentDirectoryTableModel" sourceFile="StudentDirectoryPanel.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.StudentRegistrationPanel" sourceFile="StudentRegistrationPanel.java" interface="false" size="228" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.StudentRegistrationPanel$1" sourceFile="StudentRegistrationPanel.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.StudentRegistrationPanel$2" sourceFile="StudentRegistrationPanel.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.ui.StudentRegistrationPanel$CourseTableModel" sourceFile="StudentRegistrationPanel.java" interface="false" size="42" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.pack_scheduler.user" total_bugs="3" total_types="5" total_size="359" priority_2="1" priority_1="2">
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.user.Faculty" sourceFile="Faculty.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.user.FacultyTest" sourceFile="FacultyTest.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.user.Student" sourceFile="Student.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.user.StudentTest" sourceFile="StudentTest.java" interface="false" size="176" bugs="3" priority_2="1" priority_1="2"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.user.User" sourceFile="User.java" interface="false" size="66" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.pack_scheduler.user.schedule" total_bugs="0" total_types="4" total_size="327">
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.user.schedule.FacultySchedule" sourceFile="FacultySchedule.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.user.schedule.FacultyScheduleTest" sourceFile="FacultyScheduleTest.java" interface="false" size="113" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.user.schedule.Schedule" sourceFile="Schedule.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.user.schedule.ScheduleTest" sourceFile="ScheduleTest.java" interface="false" size="113" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.pack_scheduler.util" total_bugs="4" total_types="22" total_size="1928" priority_2="4">
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.ArrayList" sourceFile="ArrayList.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.ArrayListTest" sourceFile="ArrayListTest.java" interface="false" size="275" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.ArrayQueue" sourceFile="ArrayQueue.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.ArrayQueueTest" sourceFile="ArrayQueueTest.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.ArrayStack" sourceFile="ArrayStack.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.ArrayStackTest" sourceFile="ArrayStackTest.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedAbstractList" sourceFile="LinkedAbstractList.java" interface="false" size="121" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedAbstractList$ListNode" sourceFile="LinkedAbstractList.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedAbstractListTest" sourceFile="LinkedAbstractListTest.java" interface="false" size="299" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedList" sourceFile="LinkedList.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedList$LinkedListIterator" sourceFile="LinkedList.java" interface="false" size="89" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedList$ListNode" sourceFile="LinkedList.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedListRecursive" sourceFile="LinkedListRecursive.java" interface="false" size="82" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedListRecursive$ListNode" sourceFile="LinkedListRecursive.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedListRecursiveTest" sourceFile="LinkedListRecursiveTest.java" interface="false" size="216" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedListTest" sourceFile="LinkedListTest.java" interface="false" size="174" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedQueue" sourceFile="LinkedQueue.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedQueueTest" sourceFile="LinkedQueueTest.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedStack" sourceFile="LinkedStack.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.LinkedStackTest" sourceFile="LinkedStackTest.java" interface="false" size="84" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.Queue" sourceFile="Queue.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.pack_scheduler.util.Stack" sourceFile="Stack.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="3204" invocations="2" avgMicrosecondsPerInvocation="1602027" maxMicrosecondsPerInvocation="2728513" standardDeviationMicrosecondsPerInvocation="1126485"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2143" invocations="2064" avgMicrosecondsPerInvocation="1038" maxMicrosecondsPerInvocation="152208" standardDeviationMicrosecondsPerInvocation="5315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="913" invocations="529" avgMicrosecondsPerInvocation="1727" maxMicrosecondsPerInvocation="76738" standardDeviationMicrosecondsPerInvocation="5051"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="910" invocations="529" avgMicrosecondsPerInvocation="1720" maxMicrosecondsPerInvocation="43623" standardDeviationMicrosecondsPerInvocation="4247"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="762" invocations="559" avgMicrosecondsPerInvocation="1363" maxMicrosecondsPerInvocation="71163" standardDeviationMicrosecondsPerInvocation="4579"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="715" invocations="2069" avgMicrosecondsPerInvocation="345" maxMicrosecondsPerInvocation="50157" standardDeviationMicrosecondsPerInvocation="1757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="695" invocations="561" avgMicrosecondsPerInvocation="1240" maxMicrosecondsPerInvocation="53657" standardDeviationMicrosecondsPerInvocation="4508"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="559" invocations="1473" avgMicrosecondsPerInvocation="379" maxMicrosecondsPerInvocation="37891" standardDeviationMicrosecondsPerInvocation="1451"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="540" invocations="561" avgMicrosecondsPerInvocation="964" maxMicrosecondsPerInvocation="36868" standardDeviationMicrosecondsPerInvocation="2753"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="482" invocations="624" avgMicrosecondsPerInvocation="772" maxMicrosecondsPerInvocation="42385" standardDeviationMicrosecondsPerInvocation="2417"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="437" invocations="612" avgMicrosecondsPerInvocation="715" maxMicrosecondsPerInvocation="19422" standardDeviationMicrosecondsPerInvocation="1651"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="432" invocations="561" avgMicrosecondsPerInvocation="770" maxMicrosecondsPerInvocation="56528" standardDeviationMicrosecondsPerInvocation="2975"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="298" invocations="481" avgMicrosecondsPerInvocation="621" maxMicrosecondsPerInvocation="26482" standardDeviationMicrosecondsPerInvocation="1591"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="253" invocations="529" avgMicrosecondsPerInvocation="479" maxMicrosecondsPerInvocation="9242" standardDeviationMicrosecondsPerInvocation="940"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="237" invocations="529" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="56723" standardDeviationMicrosecondsPerInvocation="3802"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="213" invocations="561" avgMicrosecondsPerInvocation="380" maxMicrosecondsPerInvocation="55747" standardDeviationMicrosecondsPerInvocation="2728"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="197" invocations="529" avgMicrosecondsPerInvocation="374" maxMicrosecondsPerInvocation="32776" standardDeviationMicrosecondsPerInvocation="1539"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="167" invocations="529" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="22514" standardDeviationMicrosecondsPerInvocation="1095"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="158" invocations="577" avgMicrosecondsPerInvocation="274" maxMicrosecondsPerInvocation="53219" standardDeviationMicrosecondsPerInvocation="2364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="154" invocations="529" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="30737" standardDeviationMicrosecondsPerInvocation="1561"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="154" invocations="93" avgMicrosecondsPerInvocation="1662" maxMicrosecondsPerInvocation="39780" standardDeviationMicrosecondsPerInvocation="4486"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1611173667419" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"GuessingGame","l":"collectGuess(int)"},{"p":"<Unnamed>","c":"GuessingGame","l":"GuessingGame()","url":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"GuessingGame","l":"main(String[])","url":"main(java.lang.String[])"},{"p":"<Unnamed>","c":"GuessingGame","l":"MAXIMUM_BOUNDARY"}]

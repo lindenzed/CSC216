@@ -1,0 +1,59 @@
+package edu.ncsu.csc216.pack_scheduler.manager;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class RegistrationManagerTest {
+	
+	private RegistrationManager manager;
+	
+	/**
+	 * Sets up the CourseManager and clears the data.
+	 * @throws Exception if error
+	 */
+	@Before
+	public void setUp() throws Exception {
+		manager = RegistrationManager.getInstance();
+		manager.clearData();
+	}
+
+	@Test
+	public void testGetCourseCatalog() {
+		manager.getCourseCatalog().loadCoursesFromFile("test-files/course_records.txt");
+		assertTrue(manager.getCourseCatalog().getCourseCatalog().length == 8);
+	}
+
+	@Test
+	public void testGetStudentDirectory() {
+		manager.getStudentDirectory().loadStudentsFromFile("test-files/student_records.txt");
+		assertTrue(manager.getStudentDirectory().getStudentDirectory().length == 10);
+	}
+
+	@Test
+	public void testLogin() {
+		manager.getStudentDirectory().loadStudentsFromFile("test-files/Student_Bears_Ordered.txt");
+		assertTrue(manager.login("topbear", "nomnom"));
+		assertTrue(manager.login("zgiles", "sethrollins"));
+		
+	}
+
+	@Test
+	public void testLogout() {
+		manager.getStudentDirectory().loadStudentsFromFile("test-files/Student_Bears_Ordered.txt");
+		assertTrue(manager.login("topbear", "nomnom"));
+		assertNotNull(manager.getCurrentUser());
+		manager.logout();
+		assertNull(manager.getCurrentUser());
+	}
+
+	@Test
+	public void testGetCurrentUser() {
+		manager.getStudentDirectory().loadStudentsFromFile("test-files/Student_Bears_Ordered.txt");
+		assertTrue(manager.login("topbear", "nomnom"));
+		assertEquals(manager.getStudentDirectory().getStudentById("topbear"), manager.getCurrentUser());
+	}
+
+}

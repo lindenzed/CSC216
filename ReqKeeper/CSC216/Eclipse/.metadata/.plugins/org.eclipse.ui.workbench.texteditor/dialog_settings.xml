@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="logoutTables"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="logoutTables"/>
+			<item value="logout"/>
+			<item value="clear"/>
+			<item value="container"/>
+			<item value="update"/>
+			<item value="open"/>
+			<item value="course"/>
+			<item value="wait"/>
+			<item value="list"/>
+			<item value="updateTables"/>
+			<item value="lowerEtched"/>
+			<item value="tableSchedule"/>
+			<item value="Catalog"/>
+			<item value="currentUser"/>
+			<item value="get"/>
+		</list>
+		<list key="replacehistory">
+			<item value="tableRoll"/>
+			<item value="Schedule"/>
+			<item value="info"/>
+			<item value="schedule"/>
+			<item value="list2"/>
+			<item value="faculty"/>
+			<item value="Faculty"/>
+			<item value="maxCourses"/>
+			<item value="Courses"/>
+			<item value="drop"/>
+			<item value="Linked"/>
+			<item value="dequeue"/>
+			<item value="enqueue"/>
+			<item value="ArrayQueue"/>
+			<item value="INSTRUCTOR_ID, ENROLLMENT_CAP"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="208"/>
+		<item key="DIALOG_Y_ORIGIN" value="43"/>
+		<item key="DIALOG_WIDTH" value="283"/>
+		<item key="DIALOG_HEIGHT" value="393"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

@@ -1,0 +1,51 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.pack_scheduler.course.validator;
+
+/**
+ * Context class for implementing the Validator FSM in the State Pattern
+ * @author Zach Giles
+ *
+ */
+public class CourseNameValidator {
+
+	static final int MAX_LETTERS = 4;
+	private int letterCounter = 0;
+	private int digitCounter = 0;
+	static final int NEEDED_DIGITS = 3;
+	private State state;
+	private State initialState = new InitialState();
+	public CourseNameValidator() {
+		
+	}
+	
+	public boolean isValid(String courseName)  throws InvalidTransitionException {
+		return false;
+	}
+	
+	abstract private class State {
+		/**Defines what the state should do on a letter input*/
+		abstract void onLetter();
+		/**Defines what the state should do on a digit input*/
+		abstract void onDigit();
+		/**Defines what the state should do on non-alphanumeric input*/
+		void onOther() throws InvalidTransitionException {
+			throw new InvalidTransitionException("Course name can only contain letters and digits.");
+		}
+	}
+	
+	private class InitialState extends State {
+		@Override
+		void onLetter() {
+			letterCounter++;
+			state
+		}
+	}
+	private class LetterState extends State {
+		@Override
+		void onLetter() {
+			
+		}
+	}
+}

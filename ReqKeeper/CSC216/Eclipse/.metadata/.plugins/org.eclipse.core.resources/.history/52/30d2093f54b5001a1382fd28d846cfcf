@@ -1,0 +1,307 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.pack_scheduler.course;
+
+import java.util.Objects;
+
+/**
+ * The Course Class creates a course for use in WolfScheduler program.
+ * 
+ * @author Zach Giles
+ *
+ */
+public class Course extends Activity implements Comparable<Course> {
+	/**Declares the length of a section string*/
+	private static final int SECTION_LENGTH = 3;
+	/**Declares the maximum length of a Course name*/
+	private static final int MAX_NAME_LENGTH = 6;
+	/**Declares the minimum length of a Course name*/
+	private static final int MIN_NAME_LENGTH = 4;
+	/**Declares the maximum credit hours a Course can be*/
+	private static final int MAX_CREDITS = 5;
+	/**Declares the minimum credit hours a Course can have*/
+	private static final int MIN_CREDITS = 1;
+	/** Course's name. */
+	private String name;
+	
+	/** Course's section. */
+	private String section;
+	
+	/** Course's credit hours */
+	private int credits;
+	
+	/** Course's instructor */
+	private String instructorId;
+	
+	/**
+	 * Creates a Course with a 8 parameter method signature.
+	 * @param name The Course's name
+	 * @param title The Course's title
+	 * @param section The Course's section as a String
+	 * @param credits The number of hours for a Course
+	 * @param instructorId The unityID of the Course's instructor
+	 * @param meetingDays The days the course meets
+	 * @param startTime The Course start time
+	 * @param endTime The Course end time.
+	 */
+	public Course(String name, String title, String section, int credits, String instructorId, String meetingDays,
+		int startTime, int endTime) {
+		super(title, meetingDays, startTime, endTime);
+		setName(name);
+		setSection(section);
+		setCredits(credits);
+		setInstructorId(instructorId);
+	}
+
+	/**
+	 * Creates a Course with a 6 parameter method signature, excluding start and end time.
+	 * @param name The Course's name
+	 * @param title The Course's title
+	 * @param section The Course's section as a String
+	 * @param credits The number of hours for a Course
+	 * @param instructorId The unityID of the Course's instructor
+	 * @param meetingDays The days the course meets
+	 */
+	public Course(String name, String title, String section, int credits, String instructorId, String meetingDays) {
+		this(name, title, section, credits, instructorId, meetingDays, 0, 0);
+	}
+
+	/**
+	 * Returns the Course's name.
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * Sets the Course's name. If the name is null, is less than 4 characters
+	 * or greater than 6 characters an IllegalArgumentExcpetion is thrown.
+	 * @param name the name to set
+	 * @throws IllegalArgumentException if name is null, less than 4, or 
+	 * 	greater than 6 characters long.
+	 */
+	private void setName(String name) {
+		if (name == null || name.equals("")) {
+			throw new IllegalArgumentException("name null or empty");
+		}
+		if (name.length() < MIN_NAME_LENGTH || name.length() > MAX_NAME_LENGTH) {
+			throw new IllegalArgumentException("Illegal name length");
+		}
+		this.name = name;
+	}
+
+	/**
+	 * Return the Course's section number as a String.
+	 * @return the section
+	 */
+	public String getSection() {
+		return section;
+	}
+
+	/**
+	 * Sets the Course's section number. Throws IllegalArgumentException if section is a null
+	 * or empty String, if the length of the section string is not 3 characters, or if the section
+	 * string doesn't contain all digits.
+	 * @param section the section to set
+	 * @throws IllegalArgumentException if section is null or empty, if section doesn't contain
+	 * three digits.
+	 */
+	public void setSection(String section) {
+		if (section == null || section.equals("")) {
+			throw new IllegalArgumentException("section is null or empty");
+		}
+		if (section.length() != SECTION_LENGTH) {
+			throw new IllegalArgumentException("section name is not 3 characters");
+		}
+		for (int i = 0; i < SECTION_LENGTH; i++) {
+			if (!Character.isDigit(section.charAt(i))) {
+				throw new IllegalArgumentException("section does not contain only digits");
+			}
+		}
+		this.section = section;
+	}
+
+	/**
+	 * Returns the number of credit hours for the Course.
+	 * @return the credits
+	 */
+	public int getCredits() {
+		return credits;
+	}
+
+	/**
+	 * Sets the Course's number of credit hours. Throws IllegalArgumentException if credits
+	 * are less than 1 or greater than 5.
+	 * @param credits the credits to set
+	 * @throws IllegalArgumentException if credits are less than 1, or greater than 5
+	 */
+	public void setCredits(int credits) {
+		if (credits < MIN_CREDITS || credits > MAX_CREDITS) {
+			throw new IllegalArgumentException("Credit hours less than 1, or greater than 5");
+		}
+		this.credits = credits;
+	}
+
+	/**
+	 * Returns the Course's  instructor's unityID.
+	 * @return the instructorId
+	 */
+	public String getInstructorId() {
+		return instructorId;
+	}
+
+	/**
+	 * Sets the Course's instructor's unityID. Throws IllegalArgumentException if 
+	 * instructorId is null or empty.
+	 * @param instructorId the instructorId to set
+	 * @throws IllegalArgumentException if instructorId is null or empty
+	 */
+	public void setInstructorId(String instructorId) {
+		if (instructorId == null || instructorId.equals("")) {
+			throw new IllegalArgumentException("instructorId is null or empty");
+		}
+		this.instructorId = instructorId;
+	}
+
+	/**
+	 * Generates hashCode for Course using all fields.
+	 * @return hashCode for Course
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Objects.hash(credits, instructorId, name, section);
+		return result;
+	}
+
+	/**
+	 * Compares Object equality for Course based on all fields.
+	 * @param obj Object to compare
+	 * @return true if all fields are equal
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Course other = (Course) obj;
+		return credits == other.credits && Objects.equals(instructorId, other.instructorId)
+				&& Objects.equals(name, other.name) && Objects.equals(section, other.section);
+	}
+
+	/**
+	 * Returns a comma separated value String of all Course fields.
+	 * @return String representation of Course
+	 */
+	@Override
+	public String toString() {
+	    if (this.getMeetingDays().equals("A")) {
+	        return name + "," + this.getTitle() + "," + section + "," + credits + "," + instructorId + "," + this.getMeetingDays();
+	    }
+	    return name + "," + this.getTitle() + "," + section + "," + credits + "," + instructorId + "," + this.getMeetingDays() + "," + this.getStartTime() + "," + this.getEndTime(); 
+	}
+
+	/**
+	 * Returns a String array with abridged Course information.
+	 * Fields included are Course name, Course section, Course title,
+	 * and Course meeting days.
+	 */
+	@Override
+	public String[] getShortDisplayArray() {
+		String[] shortDisplay = new String[4];
+		shortDisplay[0] = this.getName();
+		shortDisplay[1] = this.getSection();
+		shortDisplay[2] = this.getTitle();
+		shortDisplay[3] = this.getMeetingString();
+		return shortDisplay;
+	}
+
+	/**
+	 * Returns a String array with full Course information except start/end time.
+	 * Fields included are Course name, section, title, credits, instructor ID, meeting
+	 * days, , an an empty String for a field that an Event has, but Course does not.
+	 */
+	@Override
+	public String[] getLongDisplayArray() {
+		String[] longDisplay = new String[7];
+		longDisplay[0] = this.getName();
+		longDisplay[1] = this.getSection();
+		longDisplay[2] = this.getTitle();
+		longDisplay[3] = "" + this.getCredits();
+		longDisplay[4] = this.getInstructorId();
+		longDisplay[5] = this.getMeetingString();
+		longDisplay[6] = "";
+		return longDisplay;
+	}
+
+	/**
+	 * Sets the days the Course meets. Throws IllegalArgumentException if meetingDays is 
+	 * null or empty, contains 'A' along with other characters, or contains characters
+	 * that don't correspond to a day of the week.
+	 * @param meetingDays the meetingDays to set
+	 * @throws IllegalArgumentException if meetingDays is null or empty, or contains
+	 * and invalid character, or invalid combination of characters
+	 */
+	@Override
+	public void setMeetingDays(String meetingDays) {
+		if (meetingDays == null || meetingDays.equals("")) {
+			throw new IllegalArgumentException("meetingDays is null or empty");
+		}
+		if (meetingDays.contains("A") && meetingDays.length() > 1) {
+			throw new IllegalArgumentException("cannot contain 'A' and other days");
+		}
+		for (int i = 0; i < meetingDays.length(); i++) {
+			char c = meetingDays.charAt(i);
+			if (c != 'M' && c != 'T' && c != 'W' && c != 'H' && c != 'F' && c != 'A') {
+				throw new IllegalArgumentException("meeting days can only contain M T W H F or A");
+			}
+		}
+		super.setMeetingDays(meetingDays);
+	}
+
+	/**
+	 * Determines if a Course is a duplicate based on the Course
+	 * name.
+	 * @param activity Activity to determine if duplicate
+	 * @throws IllegalArgumentException if the Course already
+	 * exists on an Activity schedule.
+	 * @throws IllegalArgumentException if the passed activity
+	 * isn't a Course.
+	 */
+	@Override
+	public boolean isDuplicate(Activity activity) {
+		if (activity instanceof Course) {
+			Course c = (Course) activity;
+			if (this.getName().equals(c.getName())) {
+				throw new IllegalArgumentException("You are already enrolled in " + this.getName());
+			}
+			else {
+				return false;
+			}
+		}
+		else {
+			throw new IllegalArgumentException("Invalid activity");
+		}
+	}
+	
+	@Override
+	public int compareTo(Course c) {
+		String thisCourseName = this.getName();
+		String thisCourseSection = this.getSection();
+		String paramCourseName = c.getName();
+		String paramCourseSection = c.getSection();
+		if (thisCourseName.compareToIgnoreCase(paramCourseName) == 0) {
+			return thisCourseSection.compareToIgnoreCase(paramCourseSection);
+		}
+		else { return thisCourseName.compareToIgnoreCase(paramCourseName); }
+	}
+	
+	
+
+}

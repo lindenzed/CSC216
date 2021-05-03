@@ -1,0 +1,26 @@
+import java.util.*;
+/**
+ *Uses Pythagorean Theorem to calculate length of
+ *triangle given the other two sides.
+ *
+ * @author Zach Giles
+ *
+ * @version 21Jan2020
+ */
+public class HW {
+    public static void main (String[] args) {
+        ifElseMystery1(3,20);
+        ifElseMystery1(4,5);
+    }
+    public static void ifElseMystery1(int x, int y) {
+        int z = 4;
+        if (z <= x) { 
+            z = x + 1; 
+        } else { 
+            z = z + 9; 
+        } 
+        if (z <= y) { 
+            y++; 
+        } 
+        System.out.println(z + " " + y); 
+    }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=PackScheduler/C:\/Program Files\/Java\/jdk-11.0.5\/lib\/jrt-fs.jar`java.base=/module=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/11\/docs\/api\/=/&lt;java.lang(Object.class[Object" modifiers="33" timestamp="1578444525828"/>
+    <typeInfo handle="=PackScheduler/src&lt;edu.ncsu.csc216.pack_scheduler.util{ArrayList.java[ArrayList" modifiers="1" timestamp="1594751258554"/>
+    <typeInfo handle="=PackScheduler/test&lt;edu.ncsu.csc216.pack_scheduler.util{ArrayListTest.java[ArrayListTest" modifiers="1" timestamp="1593200292807"/>
+    <typeInfo handle="=PackScheduler/test&lt;edu.ncsu.csc216.pack_scheduler.util{LinkedAbstractListTest.java[LinkedAbstractListTest" modifiers="1" timestamp="1593775985320"/>
+    <typeInfo handle="=Project2/src&lt;edu.ncsu.csc216.garage.model.service_garage{ServiceBay.java[ServiceBay" modifiers="1" timestamp="1595472652300"/>
+    <typeInfo handle="=Project2/src&lt;edu.ncsu.csc216.garage.model.vehicle{Tiered.java[Tiered" modifiers="513" timestamp="1594613228940"/>
+    <typeInfo handle="=Project2/src&lt;edu.ncsu.csc216.garage.model.vehicle{Vehicle.java[Vehicle" modifiers="1025" timestamp="1595470144679"/>
+    <typeInfo handle="=PackScheduler/C:\/Program Files\/Java\/jdk-11.0.5\/lib\/jrt-fs.jar`java.base=/module=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/11\/docs\/api\/=/&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1578444525828"/>
+    <typeInfo handle="=PackScheduler/src&lt;edu.ncsu.csc216.pack_scheduler.util{Stack.java[Stack" modifiers="513" timestamp="1594493317805"/>
+    <typeInfo handle="=PackScheduler/src&lt;edu.ncsu.csc216.pack_scheduler.util{Queue.java[Queue" modifiers="513" timestamp="1594532645036"/>
+</typeInfoHistroy>

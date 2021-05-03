@@ -1,0 +1,82 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.pack_scheduler.course.validator;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+
+/**
+ * Tests the state transitions for a Course name.  A valid course name
+ * is 1-4 letters followed by 3 numbers, and then an optional suffix.
+ * Anything else in invalid.
+ * @author Zach Giles
+ *
+ */
+public class CourseNameValidatorFSMTest {
+
+	/**
+	 * Test the 1st Letter state
+	 */
+	@Test
+	public void testFirstLetterStateValid() {
+		CourseNameValidatorFSM cv = new CourseNameValidatorFSM();
+		String courseName = "C";
+		try {
+			cv.isValid(courseName);
+		}
+		catch (InvalidTransitionException e) {
+			try {
+				assertTrue(cv.isValid(courseName + "SCA116"));
+			}
+			catch(InvalidTransitionException ee) {
+				fail();
+			}
+		}
+	}
+	
+	/**
+	 * Test the 2nd Letter state
+	 */
+	@Test
+	public void testSecondLetterStateValid() {
+		CourseNameValidatorFSM cv = new CourseNameValidatorFSM();
+		String courseName = "CS";
+		try {
+			cv.isValid(courseName);
+		}
+		catch (InvalidTransitionException e) {
+			try {
+				assertTrue(cv.isValid(courseName + "CA116"));
+			}
+			catch(InvalidTransitionException ee) {
+				fail();
+			}
+		}
+	}
+	
+	/**
+	 * Test the 3rd Letter state
+	 */
+	@Test
+	public void testThirdLetterStateValid() {
+		CourseNameValidatorFSM cv = new CourseNameValidatorFSM();
+		String courseName = "CSC";
+		try {
+			cv.isValid(courseName);
+		}
+		catch (InvalidTransitionException e) {
+			try {
+				assertTrue(cv.isValid(courseName + "A116"));
+			}
+			catch(InvalidTransitionException ee) {
+				fail();
+			}
+		}
+	}
+
+	
+}

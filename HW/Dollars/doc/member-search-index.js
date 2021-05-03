@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"Dollars","l":"Dollars()","url":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"Dollars","l":"FIVE_DOLLARS"},{"p":"<Unnamed>","c":"Dollars","l":"main(String[])","url":"main(java.lang.String[])"},{"p":"<Unnamed>","c":"Dollars","l":"ONE_DOLLAR"},{"p":"<Unnamed>","c":"Dollars","l":"TEN_DOLLARS"},{"p":"<Unnamed>","c":"Dollars","l":"TWENTY_DOLLARS"}]

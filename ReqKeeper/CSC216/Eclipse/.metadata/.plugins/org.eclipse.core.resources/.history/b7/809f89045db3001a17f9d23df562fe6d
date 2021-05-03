@@ -1,0 +1,515 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.tracker.requirement;
+
+import edu.ncsu.csc216.tracker.model.RequirementsList;
+import edu.ncsu.csc216.tracker.requirement.enums.CommandValue;
+import edu.ncsu.csc216.tracker.requirement.enums.Rejection;
+import edu.ncsu.csc216.tracker.xml.Req;
+
+/**
+ * This is the context class for the ReqKeeper application.  A Requirement Object
+ * has a state that is set by passing a String to the setState function that 
+ * corresponds to one of six states("Submitted", "Accepted", "Rejected",
+ * "Working", "Completed", or "Verified").  The state is updated from
+ * Commands  passed to it from the UI.  If passed to the rejected state,
+ * a rejection reason must be given to the setRejectionReason function, 
+ * and must be a String corresponding to one of the static, final Strings
+ * listed as a class constant.  Besides the Requirement state, a Requirement Object
+ * also has a unique ID, an acceptance Test ID, a priority of 1-3, a time estimate until
+ * completion, a developer field to keep track of the current developer, and a summary
+ * field.
+ * 
+ * @author Zach Giles
+ *
+ */
+public class Requirement {
+	/**Holds the String for setting state to Submitted*/
+	public static final String SUBMITTED_NAME = "Submitted";
+	/**Holds the String for setting state to Accepted*/
+	public static final String ACCEPTED_NAME = "Accepted";
+	/**Holds the String for setting state to Rejected*/
+	public static final String REJECTED_NAME = "Rejected";
+	/**Holds the String for setting state to Working*/
+	public static final String WORKING_NAME = "Working";
+	/**Holds the String for setting state to Completed*/
+	public static final String COMPLETED_NAME = "Completed";
+	/**Holds the String for setting state to Working*/
+	public static final String VERIFIED_NAME = "Verified";
+
+	/**Holds the String for setting rejection reason to Duplicate*/
+	public static final String DUPLICATE_NAME = "Duplicate";
+	/**Holds the String for setting rejection reason to Infeasible*/
+	public static final String INFEASIBLE_NAME = "Infeasible";
+	/**Holds the String for setting rejection reason to Too Large*/
+	public static final String TOO_LARGE_NAME = "Too large";
+	/**Holds the String for setting rejection reason to Out of Scope*/
+	public static final String OUT_OF_SCOPE_NAME = "Out of Scope";
+	/**Holds the String for setting rejection reason to Inappropriate*/
+	public static final String INAPPROPRIATE_NAME = "Inappropriate";
+	
+	/**Defines the inner class that creates the SubmittedState state holder*/
+	private final RequirementState submittedState = new SubmittedState();
+	/**Defines the inner class that creates the AcceptedState state holder*/
+	private final RequirementState acceptedState = new AcceptedState();
+	/**Defines the inner class that creates the RejectedState state holder*/
+	private final RequirementState rejectedState = new RejectedState();
+	/**Defines the inner class that creates the WorkingState state holder*/
+	private final RequirementState workingState = new WorkingState();
+	/**Defines the inner class that creates the CompletedState state holder*/
+	private final RequirementState completedState = new CompletedState();
+	/**Defines the inner class that creates the VerifiedState state holder*/
+	private final RequirementState verifiedState = new VerifiedState();
+	/**Holds the current RequirementState the Requirement is in*/
+	private RequirementState state;
+	/**The unique requirement id*/
+	private int requirementId;
+	/**A brief summary of the requirement, can include information related
+	 * to rejection, if rejected*/
+	private String summary;
+	/**The acceptance test id that gives information on the test id needed
+	 * for requirement state progression*/
+	private String acceptanceTestId;
+	/**The priority for the Requirement, 1-3 with 1 being lowest, 3 highest*/
+	private int priority;
+	/**A time estimate needed to complete the Requirement. Completion is reached
+	 * when the state is Verified*/
+	private String estimate;
+	/**The current developer assigned to the Requirement*/
+	private String developer;
+	/**Counts the state transitions for the Requirement*/
+	private static int counter;
+	/**Holds the rejection reason for a state after it has been rejected*/
+	private Rejection rejectionReason;
+	/**Holds Requirements in XML format that is used for importing Requirement objects*/
+	private RequirementsList reqs;
+	
+	
+	/**Constructs a Requirement from an inputed summary 
+	 * 	 * and acceptance test id
+	 * @param state The initial state of the requirement
+	 * @param summary the summary for the new requirement
+	 */
+
+	public Requirement (String state, String summary) {
+		setState(state);
+		this.summary = summary;
+	}
+	
+	/**Constructs a Requirement from an XML Requirement
+	 * @param r the XML Req used to construct the Requirement Object
+	 */
+	public Requirement (Req r) {
+		this.requirementId = r.getId();
+		setState(r.getState());
+		this.summary = r.getSummary();
+		this.acceptanceTestId = r.getTest();
+		this.priority = r.getPriority();
+		this.estimate = r.getEstimate();
+		this.developer = r.getDeveloper();
+		if (r.getRejection() != null) {
+			setRejectionReason(r.getRejection());
+		}
+	}
+
+	/**
+	 * Sets the Requirement to one of the six defined states
+	 */
+	private void setState(String state) {
+		if (state.equals(ACCEPTED_NAME)) {
+			this.state = acceptedState;
+		}
+		else if (state.equals(COMPLETED_NAME)) {
+			this.state = completedState;
+		}
+		else if (state.equals(REJECTED_NAME)) {
+			this.state = rejectedState;
+		}
+		else if (state.equals(SUBMITTED_NAME)) {
+			this.state = submittedState;
+		}
+		else if (state.equals(VERIFIED_NAME)) {
+			this.state = verifiedState;
+		}
+		else if (state.equals(WORKING_NAME)) {
+			this.state = workingState;
+		}
+		else return;
+	}
+	/**
+	 * Gets the Requirements acceptance test id
+	 * @return the acceptanceTestId of the Requirement
+	 */
+	public String getAcceptanceTestId() {
+		return acceptanceTestId;
+	}
+
+	/**
+	 * Sets the Requirements acceptance test ID
+	 * @param acceptanceTestId the acceptanceTestId to set
+	 */
+	public void setAcceptanceTestId(String acceptanceTestId) {
+		this.acceptanceTestId = acceptanceTestId;
+	}
+
+	/**
+	 * Gets the Requirements developer
+	 * @return the developer of the Requirement
+	 */
+	public String getDeveloper() {
+		return developer;
+	}
+
+	/**
+	 * Set's the Requirements developer
+	 * @param developer the developer to set
+	 */
+	public void setDeveloper(String developer) {
+		this.developer = developer;
+	}
+
+	/**
+	 * Get's the Requirements unique ID
+	 * @return the requirementId the Requirements unique id
+	 */
+	public int getRequirementId() {
+		return requirementId;
+	}
+
+	/**
+	 * Gets the Requirements summary
+	 * @return the summary of the Requirement
+	 */
+	public String getSummary() {
+		return summary;
+	}
+
+	/**
+	 * Gets the Requirements priority (1-3)
+	 * @return the priority of the Requirement
+	 */
+	public int getPriority() {
+		return priority;
+	}
+
+	/**
+	 * Gets the Requirements time estimate
+	 * @return the estimate of the Requirement
+	 */
+	public String getEstimate() {
+		return estimate;
+	}
+	
+	/**
+	 * Counts the transitions that a Requirement has gone through.
+	 */
+	private static void incrementCounter() {
+		counter++;
+	}
+	
+	/**
+	 * Gets the Requirements current state
+	 * @return the current state of the Requirement
+	 */
+	public RequirementState getState() {
+		return state;
+	}
+	
+	/**
+	 * Gets the state of a rejected Requirement
+	 * @return the Requirements rejection reason
+	 */
+	public Rejection getRejectionReason() {
+		return rejectionReason;
+	}
+	
+	/**
+	 * Get's the reason a Requirement was rejected as a String
+	 * @return the rejection reason as a String
+	 */
+	public String getRejectionReasonString() {
+		if (rejectionReason == Rejection.DUPLICATE) {
+			return DUPLICATE_NAME;
+		}
+		else if (rejectionReason == Rejection.INAPPROPRIATE) {
+			return INAPPROPRIATE_NAME;
+		}
+		else if (rejectionReason == Rejection.INFEASIBLE) {
+			return INFEASIBLE_NAME;
+		}
+		else if (rejectionReason == Rejection.OUT_OF_SCOPE) {
+			return OUT_OF_SCOPE_NAME;
+		}
+		else if (rejectionReason == Rejection.TOO_LARGE) {
+			return TOO_LARGE_NAME;
+		}
+		else return null;
+	}
+	
+	/**
+	 * Sets the reason a Requirement was rejected
+	 * @param rejectionReason
+	 */
+	private void setRejectionReason(String rejectionReason) {
+		if (rejectionReason.equals(DUPLICATE_NAME)) {
+			this.rejectionReason = Rejection.DUPLICATE;
+		}
+		else if (rejectionReason.equals(INAPPROPRIATE_NAME)) {
+			this.rejectionReason = Rejection.INAPPROPRIATE;
+		}
+		else if (rejectionReason.equals(INFEASIBLE_NAME)) {
+			this.rejectionReason = Rejection.INFEASIBLE;
+		}
+		else if (rejectionReason.equals(OUT_OF_SCOPE_NAME)) {
+			this.rejectionReason = Rejection.OUT_OF_SCOPE;
+		}
+		else if (rejectionReason.equals(TOO_LARGE_NAME)) {
+			this.rejectionReason = Rejection.TOO_LARGE;
+		}
+	}
+	
+	/**
+	 * Changes the state of a Requirement
+	 * @param c the Command that initiates a Requirement state change
+	 */
+	public void update (Command c) {
+		state.updateState(c);
+		/*try {
+			Command c2 = new Command(c.getCommand(), c.getSummary(), c.getAcceptanceTestId(), c.getPriority(), c.getEstimate(),
+					c.getDeveloperId(), c.getRejectionReason());
+		}
+		catch (IllegalArgumentException e) {
+			throw new UnsupportedOperationException();
+		}
+		this.summary = c.getSummary();
+		this.acceptanceTestId = c.getAcceptanceTestId();
+		this.developer = c.getDeveloperId();
+		this.estimate = c.getEstimate();
+		this.priority = c.getPriority();
+		if (c.getCommand() == CommandValue.ACCEPT) {
+			this.state = acceptedState;
+		}
+		else if (c.getCommand() == CommandValue.ASSIGN) {
+			this.state = workingState;
+		}
+		else if (c.getCommand() == CommandValue.COMPLETE) {
+			this.state = completedState;
+		}
+		else if (c.getCommand() == CommandValue.FAIL) {
+			this.state = workingState;
+		}
+		else if (c.getCommand() == CommandValue.PASS) {
+			this.state = verifiedState;
+		}
+		else if (c.getCommand() == CommandValue.REJECT) {
+			state.updateState(c);
+		}
+		else if (c.getCommand() == CommandValue.REVISE) {
+			this.state = submittedState;
+			this.rejectionReason = c.getRejectionReason();
+		}*/
+	}
+	
+	/**
+	 * Gets a Requirement from XML data
+	 * @return A Req object from XML data
+	 */
+	public Req getXMLReq() {
+		Req r = new Req();
+		r.setId(this.getRequirementId());
+		r.setState(this.state.getStateName());
+		r.setSummary(this.getSummary());
+		r.setTest(this.getAcceptanceTestId());
+		r.setPriority(this.getPriority());
+		r.setEstimate(this.getEstimate());
+		r.setDeveloper(this.getDeveloper());
+		r.setRejection(this.getRejectionReasonString());
+		return r;	
+	}
+	
+	/**
+	 * Sets the transition counter
+	 * @param count the value you want to set the transition counter to
+	 */
+	public static void setCounter(int count) {
+		counter = count;
+	}
+	
+	/**Inner class definition for the Submitted State*/
+	private class SubmittedState implements RequirementState {
+		
+		/**
+		 * Sets the Requirement state to Submitted updates the 
+		 * summary and acceptance test ID.
+		 */
+		@Override
+		public void updateState(Command c) {
+			if (c.getCommand() != CommandValue.ACCEPT && c.getCommand() != CommandValue.REJECT) {
+				throw new UnsupportedOperationException();
+			}
+			if (c.getCommand() == CommandValue.ACCEPT) { setState("Accepted"); } else { setState("Rejected"); }
+			summary = c.getSummary();
+			acceptanceTestId = c.getAcceptanceTestId();
+			priority = c.getPriority();
+			estimate = c.getEstimate();
+			developer = c.getDeveloperId();
+			rejectionReason = c.getRejectionReason();
+		}
+
+		/**
+		 * Returns the state name "Submitted"
+		 */
+		@Override
+		public String getStateName() {
+			return "Submitted";
+		}
+	}
+	/**Inner class definition for Accepted State*/
+	private class AcceptedState implements RequirementState {
+		
+		/**
+		 * Updates the Requirements estimate and priority from the information in the command.
+		 */
+		@Override
+		public void updateState(Command c) {
+			if (c.getCommand() != CommandValue.ASSIGN && c.getCommand() != CommandValue.REJECT) {
+				throw new UnsupportedOperationException();
+			}
+			if (c.getCommand() == CommandValue.ASSIGN) { setState("Working"); } else { setState("Rejected"); }
+			summary = c.getSummary();
+			acceptanceTestId = c.getAcceptanceTestId();
+			priority = c.getPriority();
+			estimate = c.getEstimate();
+			developer = c.getDeveloperId();
+			rejectionReason = c.getRejectionReason();
+		}
+		
+		/**
+		 * Returns the state name "Accepted"
+		 */
+		@Override
+		public String getStateName() {
+			return "Accepted";
+		}
+	}
+	
+		/**Inner class definition for Rejected State*/
+		private class RejectedState implements RequirementState {
+			
+			/**
+			 * Updates the Requirement to the Rejected State
+			 * sets estimate, priority, and developer to null, and provides a rejection reason
+			 */
+			@Override
+			public void updateState(Command c) {
+				if (c.getCommand() != CommandValue.REVISE) {
+					throw new UnsupportedOperationException();
+				}
+				setState("Submitted");
+				summary = c.getSummary();
+				acceptanceTestId = c.getAcceptanceTestId();
+				priority = c.getPriority();
+				estimate = c.getEstimate();
+				developer = c.getDeveloperId();
+				rejectionReason = c.getRejectionReason();
+			}
+
+			/**
+			 * Returns the state name "Rejected"
+			 */
+			@Override
+			public String getStateName() {
+				return "Rejected";
+			}
+		}
+		/**Inner class definition for Working State*/
+		private class WorkingState implements RequirementState {
+
+			/**
+			 * Sets the Requirement state to Working and updates the developer id 
+			 * to the information in the command.
+			 */
+			@Override
+			public void updateState(Command c) {
+				if (c.getCommand() != CommandValue.COMPLETE && c.getCommand() != CommandValue.REJECT) {
+					throw new UnsupportedOperationException();
+				}
+				if (c.getCommand() == CommandValue.COMPLETE) { setState("Completed"); } else {setState("Rejected"); }
+				summary = c.getSummary();
+				acceptanceTestId = c.getAcceptanceTestId();
+				priority = c.getPriority();
+				estimate = c.getEstimate();
+				developer = c.getDeveloperId();
+				rejectionReason = c.getRejectionReason();
+			}
+
+			/**
+			 * Returns the state name "Working"
+			 */
+			@Override
+			public String getStateName() {
+				return "Working";
+			}
+		}
+		/**Inner class definition for Completed State*/
+		private class CompletedState implements RequirementState {
+			
+			/**
+			 * Updates the Requirement state to Completed when Working is completed
+			 */
+			@Override
+			public void updateState(Command c) {
+				if (c.getCommand() != CommandValue.PASS && c.getCommand() != CommandValue.REJECT
+						&& c.getCommand() != CommandValue.FAIL && c.getCommand() != CommandValue.ASSIGN) {
+					throw new UnsupportedOperationException();
+				}
+				if (c.getCommand() == CommandValue.PASS) { setState("Verified"); }
+				else if (c.getCommand() == CommandValue.FAIL || c.getCommand() == CommandValue.ASSIGN) { setState("Working"); }
+				else { setState("Rejected"); }
+				summary = c.getSummary();
+				acceptanceTestId = c.getAcceptanceTestId();
+				priority = c.getPriority();
+				estimate = c.getEstimate();
+				developer = c.getDeveloperId();
+				rejectionReason = c.getRejectionReason();
+			}
+
+			/**
+			 * Returns the state name "Completed"
+			 */
+			@Override
+			public String getStateName() {
+				return "Completed";
+			}
+		}
+		
+		/**Inner class definition for Verified State*/
+		private class VerifiedState implements RequirementState {
+
+			/**
+			 * Sets the Requirement state to Verified no field updates performed (final state)
+			 */
+			@Override
+			public void updateState(Command c) {
+				if (c.getCommand() != CommandValue.ASSIGN || c.getCommand() != CommandValue.REJECT) {
+					throw new UnsupportedOperationException();
+				}
+				if ( c.getCommand() == CommandValue.ASSIGN) { setState("Working"); } else { setState("Rejected"); }
+				summary = c.getSummary();
+				acceptanceTestId = c.getAcceptanceTestId();
+				priority = c.getPriority();
+				estimate = c.getEstimate();
+				developer = c.getDeveloperId();
+				rejectionReason = c.getRejectionReason();
+			}
+
+			/**
+			 * Returns the state name "Verified"
+			 */
+			@Override
+			public String getStateName() {
+				return "Verified";
+			}
+		}
+}

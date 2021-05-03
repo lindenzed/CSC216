@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.pack_scheduler.course.validator;
+
+/**
+ * Context class for implementing the Validator FSM in the State Pattern
+ * @author Zach Giles
+ *
+ */
+public class CourseNameValidator {
+
+	public CourseNameValidator() {
+		
+	}
+	
+	public boolean isValid(String courseName)  throws InvalidTransitionException {
+		return false;
+	}
+}

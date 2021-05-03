@@ -1,0 +1,79 @@
+import java.util.*;
+import java.io.*;
+/**
+ *INSERT PROJECT DESCRIPTION
+ *
+ * @author Zach Giles
+ *
+ * @version 61Mar2020
+ */
+public class ValidateCheckDigits {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        userInterface();
+
+    }
+    
+    public static void userInterface() {
+        Scanner console = new Scanner(System.in);
+        File fileName = null;
+        Scanner fileScanner = null;
+        while (fileName == null) {
+            try {
+                fileName = getUserInput(console);
+                fileScanner = new Scanner(fileName);
+            }
+            catch (FileNotFoundException e) {
+                System.out.print("File not found!");
+            }
+        }
+        processFile(fileName, fileScanner, console);
+    }
+    
+    public static File getUserInput(Scanner console) {
+            System.out.print("Enter file with possible account numbers: ");
+            File fileName = new File(console.next());
+            return fileName;
+    }
+    
+    public static void processFile(File fileName, Scanner fileScanner, Scanner console) {
+        String validFiles ="VALID_" + fileName.getName();
+        File valid = new File(validFiles);
+        PrintStream output = null;
+        try {
+            if (!valid.exists()) {
+                output = new PrintStream(valid);
+            }
+            else {
+                System.out.print("File already exists!  Do you want to overwrite?");
+                String reply = console.next();
+                if (reply.equals("y") || reply.equals("Y")) {
+                    output = new PrintStream(valid);
+                }
+            }
+        }
+        catch (FileNotFoundException e) {
+            System.exit(1);
+        }
+        while (fileScanner.hasNextLine()) {
+            int counter = 0;
+            int sum = 0;
+            String line = fileScanner.nextLine();
+            Scanner lineScanner = new Scanner (line);
+            while (counter < 5) {
+                sum += sum + lineScanner.nextInt();
+            }
+            if (sum % 10 == lineScanner.nextInt()) {
+                output.print(line);
+            }
+            else {
+                fileScanner.nextLine();
+            }
+        }
+        lineScanner.close();
+    }
+
+}

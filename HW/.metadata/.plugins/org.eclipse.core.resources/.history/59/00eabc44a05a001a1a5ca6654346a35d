@@ -1,0 +1,19 @@
+
+/**
+ *INSERT PROJECT DESCRIPTION
+ *
+ * @author Zach Giles
+ *
+ * @version 59Feb2020
+ */
+public class TwoColumns {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

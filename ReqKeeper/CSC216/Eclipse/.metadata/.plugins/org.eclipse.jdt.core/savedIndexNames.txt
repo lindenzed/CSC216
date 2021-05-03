@@ -1,0 +1,18 @@
+INDEX VERSION 1.131+C:\Users\zachs\OneDrive\Documents\CSC216\Eclipse\.metadata\.plugins\org.eclipse.jdt.core
+2315591739.index
+3846946553.index
+3010713937.index
+249660046.index
+2764915146.index
+321171633.index
+3257196557.index
+1925478543.index
+1419014417.index
+2476611328.index
+3879284679.index
+712673515.index
+315762622.index
+2507657867.index
+1451879418.index
+1658189322.index
+855799142.index

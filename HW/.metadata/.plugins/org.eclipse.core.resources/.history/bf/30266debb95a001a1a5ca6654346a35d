@@ -1,0 +1,84 @@
+import java.util.*;
+import java.io.*;
+/**
+ *Reads a weather file from user input, processes the data line
+ *by line, and the outputs the processed information into a PrintStream
+ *object that is a text file.
+ *
+ * @author Zach Giles
+ *
+ * @version 29Feb2020
+ */
+public class WeatherReporter {
+
+    /**
+     * Starts the program
+     * @param args Command line arguments (not used).
+     */
+    public static void main(String[] args) {
+        userInterface();
+
+    }
+    
+    public static void userInterface() {
+        Scanner console = new Scanner(System.in);
+        Scanner fileScanner = getUserInput(console);
+        processFile(fileScanner);
+        fileScanner.close();
+    }
+    
+    public static Scanner getUserInput(Scanner console) {
+        Scanner fileScanner = null;
+        while (fileScanner == null) {
+            System.out.print("Enter file name: ");
+            try {
+                fileScanner = new Scanner(new File(console.next()));
+            }
+            catch (FileNotFoundException e) {
+                System.out.print("File not found. ");
+            }
+        }
+        return fileScanner;
+    }
+    
+    public static void processFile(Scanner fileScanner) {
+        PrintStream output = null;
+        try {
+            output = new PrintStream(new File("WeatherReporterOutput.txt"));
+        }
+        catch (FileNotFoundException e) {
+            System.out.print("Error writing to file!");
+            System.exit(1);
+        }
+        while (fileScanner.hasNextLine()) {
+            String line = fileScanner.nextLine();
+            processLine(line,output);
+        }
+    }
+    
+    public static void processLine(String line, PrintStream output) {
+        Scanner lineScanner = new Scanner(line);
+        String date = lineScanner.next();
+        String rain = "no";
+        String snow = "no";
+        lineScanner.next();
+        double high = lineScanner.nextDouble();
+        double low = lineScanner.nextDouble();
+        String precip = lineScanner.next();
+        lineScanner.NextLine();
+        if (precip.charAt(1) == '1') {
+            rain = "yes";
+        }
+        if (precip.charAt(2) == '1') {
+            snow = "yes";
+        }
+        output.printf(date.substring(4, 6) + "/" + date.substring(6) + "/" + date.substring(0,4)
+            + " Low: %.1f High: %.1f Rain: " + rain + " Snow: " + snow, low, high);
+        output.println();
+        lineScanner.close();
+    }
+    
+    
+    
+
+}

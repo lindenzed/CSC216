@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.3" sequence="1" timestamp="1595357856212" analysisTimestamp="1595357853979" release="">
+  <Project projectName="Project2">
+    <Jar>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-PP-21\Project2\bin</Jar>
+    <AuxClasspathEntry>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-PP-21\Project2\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jdk-11.0.5\lib\jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-PP-21\Project2\src</SrcDir>
+    <SrcDir>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-PP-21\Project2\test</SrcDir>
+  </Project>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="2" rank="16" abbrev="DE" category="BAD_PRACTICE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" sourcefile="ServiceManager.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManager.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" name="putOnWaitingList" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" start="162" end="181" startBytecode="0" endBytecode="311" sourcefile="ServiceManager.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManager.java"/>
+    </Method>
+    <Class classname="edu.ncsu.csc216.garage.model.vehicle.BadVehicleInformationException" role="CLASS_EXCEPTION">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.BadVehicleInformationException" sourcefile="BadVehicleInformationException.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/BadVehicleInformationException.java"/>
+    </Class>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" start="166" end="166" startBytecode="43" endBytecode="43" sourcefile="ServiceManager.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManager.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" start="166" end="166" startBytecode="43" endBytecode="43" sourcefile="ServiceManager.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManager.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" start="166" end="166" startBytecode="43" endBytecode="43" sourcefile="ServiceManager.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManager.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" sourcefile="ServiceManager.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManager.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" name="printServiceBays" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" start="142" end="146" startBytecode="0" endBytecode="151" sourcefile="ServiceManager.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManager.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" start="144" end="144" startBytecode="8" endBytecode="8" sourcefile="ServiceManager.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManager.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" name="testFillServiceBays" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="64" end="97" startBytecode="0" endBytecode="500" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="639" end="640" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="66" end="66" startBytecode="16" endBytecode="16" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="66" end="66" startBytecode="16" endBytecode="16" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" name="testGetWaitingListItem" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="150" end="171" startBytecode="0" endBytecode="425" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="639" end="640" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="152" end="152" startBytecode="16" endBytecode="16" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="152" end="152" startBytecode="16" endBytecode="16" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" name="testReleaseFromService" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="104" end="119" startBytecode="0" endBytecode="275" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="639" end="640" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="106" end="106" startBytecode="16" endBytecode="16" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="106" end="106" startBytecode="16" endBytecode="16" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" name="testServiceManagerScanner" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="44" end="57" startBytecode="0" endBytecode="268" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="639" end="640" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="46" end="46" startBytecode="16" endBytecode="16" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" start="46" end="46" startBytecode="16" endBytecode="16" sourcefile="ServiceManagerTest.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManagerTest.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT" priority="2" rank="17" abbrev="RV" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.service_garage.GarageTest">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.service_garage.GarageTest" sourcefile="GarageTest.java" sourcepath="edu/ncsu/csc216/garage/model/service_garage/GarageTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.model.service_garage.GarageTest" name="testGetBayAt" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.service_garage.GarageTest" start="101" end="128" startBytecode="0" endBytecode="388" sourcefile="GarageTest.java" sourcepath="edu/ncsu/csc216/garage/model/service_garage/GarageTest.java"/>
+    </Method>
+    <Method classname="edu.ncsu.csc216.garage.model.service_garage.Garage" name="getBayAt" signature="(I)Ledu/ncsu/csc216/garage/model/service_garage/ServiceBay;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.service_garage.Garage" start="91" end="91" startBytecode="0" endBytecode="58" sourcefile="Garage.java" sourcepath="edu/ncsu/csc216/garage/model/service_garage/Garage.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.service_garage.GarageTest" start="116" end="116" startBytecode="119" endBytecode="119" sourcefile="GarageTest.java" sourcepath="edu/ncsu/csc216/garage/model/service_garage/GarageTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.service_garage.GarageTest" start="116" end="116" startBytecode="119" endBytecode="119" sourcefile="GarageTest.java" sourcepath="edu/ncsu/csc216/garage/model/service_garage/GarageTest.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.service_garage.ServiceBay">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.service_garage.ServiceBay" sourcefile="ServiceBay.java" sourcepath="edu/ncsu/csc216/garage/model/service_garage/ServiceBay.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.model.service_garage.ServiceBay" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.service_garage.ServiceBay" start="38" end="42" startBytecode="0" endBytecode="115" sourcefile="ServiceBay.java" sourcepath="edu/ncsu/csc216/garage/model/service_garage/ServiceBay.java"/>
+    </Method>
+    <Field classname="edu.ncsu.csc216.garage.model.service_garage.ServiceBay" name="nextNumber" signature="I" isStatic="true">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.service_garage.ServiceBay" sourcefile="ServiceBay.java" sourcepath="edu/ncsu/csc216/garage/model/service_garage/ServiceBay.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.service_garage.ServiceBay" start="40" end="40" startBytecode="33" endBytecode="33" sourcefile="ServiceBay.java" sourcepath="edu/ncsu/csc216/garage/model/service_garage/ServiceBay.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.service_garage.ServiceBay" start="40" end="40" startBytecode="33" endBytecode="33" sourcefile="ServiceBay.java" sourcepath="edu/ncsu/csc216/garage/model/service_garage/ServiceBay.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.vehicle.HybridElectricCarTest">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.HybridElectricCarTest" sourcefile="HybridElectricCarTest.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/HybridElectricCarTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.model.vehicle.HybridElectricCarTest" name="testHybridElectricCar" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.HybridElectricCarTest" start="136" end="227" startBytecode="0" endBytecode="349" sourcefile="HybridElectricCarTest.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/HybridElectricCarTest.java"/>
+    </Method>
+    <LocalVariable name="hev1" register="1" pc="346" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.HybridElectricCarTest" start="173" end="173" startBytecode="345" endBytecode="345" sourcefile="HybridElectricCarTest.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/HybridElectricCarTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.HybridElectricCarTest" start="173" end="173" startBytecode="345" endBytecode="345" sourcefile="HybridElectricCarTest.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/HybridElectricCarTest.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="hev1"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.MANY_STORES" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.vehicle.VehicleList">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.VehicleList" sourcefile="VehicleList.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/VehicleList.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.model.vehicle.VehicleList" name="filteredList" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.VehicleList" start="260" end="268" startBytecode="0" endBytecode="181" sourcefile="VehicleList.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/VehicleList.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.VehicleList" start="264" end="264" startBytecode="22" endBytecode="22" sourcefile="VehicleList.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/VehicleList.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.vehicle.VehicleList$Node">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.VehicleList$Node" start="335" end="338" sourcefile="VehicleList.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/VehicleList.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.garage.model.vehicle.VehicleListTest">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.VehicleListTest" sourcefile="VehicleListTest.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/VehicleListTest.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.model.vehicle.VehicleListTest" name="testVehicleListScanner" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.VehicleListTest" start="31" end="41" startBytecode="0" endBytecode="235" sourcefile="VehicleListTest.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/VehicleListTest.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="639" end="640" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.VehicleListTest" start="31" end="31" startBytecode="13" endBytecode="13" sourcefile="VehicleListTest.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/VehicleListTest.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.model.vehicle.VehicleListTest" start="31" end="31" startBytecode="13" endBytecode="13" sourcefile="VehicleListTest.java" sourcepath="edu/ncsu/csc216/garage/model/vehicle/VehicleListTest.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" start="36" end="44" startBytecode="0" endBytecode="217" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="639" end="640" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" start="39" end="39" startBytecode="50" endBytecode="50" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" start="39" end="39" startBytecode="50" endBytecode="50" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" start="36" end="44" startBytecode="0" endBytecode="217" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="566" end="567" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" start="29" end="29" startBytecode="24" endBytecode="24" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" start="29" end="29" startBytecode="24" endBytecode="24" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" name="printMenu" signature="()I" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" start="52" end="60" startBytecode="0" endBytecode="212" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="566" end="567" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" start="53" end="53" startBytecode="17" endBytecode="17" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageConsole" start="53" end="53" startBytecode="17" endBytecode="17" sourcefile="RepairGarageConsole.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageConsole.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="116" end="148" startBytecode="0" endBytecode="854" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="639" end="640" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="123" end="123" startBytecode="318" endBytecode="318" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="123" end="123" startBytecode="318" endBytecode="318" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" rank="16" abbrev="Dm" category="BAD_PRACTICE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="242" end="269" startBytecode="0" endBytecode="441" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="264" end="264" startBytecode="207" endBytecode="207" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="264" end="264" startBytecode="207" endBytecode="207" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+  </BugInstance>
+  <BugInstance type="DM_EXIT" priority="2" rank="16" abbrev="Dm" category="BAD_PRACTICE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" name="endExecution" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="333" end="334" startBytecode="0" endBytecode="50" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="333" end="333" startBytecode="1" endBytecode="1" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="333" end="333" startBytecode="1" endBytecode="1" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD_STORE" priority="2" rank="16" abbrev="Se" category="BAD_PRACTICE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" name="serviceMgr" signature="Ledu/ncsu/csc216/garage/model/dealer/Manageable;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Field>
+    <Type descriptor="Ledu/ncsu/csc216/garage/model/dealer/ServiceManager;" role="TYPE_FOUND">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" start="38" end="223" sourcefile="ServiceManager.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManager.java"/>
+    </Type>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="105" end="105" startBytecode="286" endBytecode="286" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD_STORE" priority="2" rank="16" abbrev="Se" category="BAD_PRACTICE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" name="serviceMgr" signature="Ledu/ncsu/csc216/garage/model/dealer/Manageable;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Field>
+    <Type descriptor="Ledu/ncsu/csc216/garage/model/dealer/ServiceManager;" role="TYPE_FOUND">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" start="38" end="223" sourcefile="ServiceManager.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManager.java"/>
+    </Type>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="123" end="123" startBytecode="324" endBytecode="324" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD_STORE" priority="2" rank="16" abbrev="Se" category="BAD_PRACTICE" first="1">
+    <Class classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" name="serviceMgr" signature="Ledu/ncsu/csc216/garage/model/dealer/Manageable;" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+    </Field>
+    <Type descriptor="Ledu/ncsu/csc216/garage/model/dealer/ServiceManager;" role="TYPE_FOUND">
+      <SourceLine classname="edu.ncsu.csc216.garage.model.dealer.ServiceManager" start="38" end="223" sourcefile="ServiceManager.java" sourcepath="edu/ncsu/csc216/garage/model/dealer/ServiceManager.java"/>
+    </Type>
+    <SourceLine classname="edu.ncsu.csc216.garage.ui.RepairGarageGUI" start="136" end="136" startBytecode="411" endBytecode="411" sourcefile="RepairGarageGUI.java" sourcepath="edu/ncsu/csc216/garage/ui/RepairGarageGUI.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 21 Jul 2020 14:37:58 -0400" total_classes="28" referenced_classes="358" total_bugs="21" total_size="1509" num_packages="5" java_version="11.0.5" vm_version="11.0.5+10-LTS" cpu_seconds="5.33" clock_seconds="2.24" peak_mbytes="855.68" alloc_mbytes="1024.00" gc_seconds="0.22" priority_2="12" priority_1="9">
+    <PackageStats package="edu.ncsu.csc216.garage.model.dealer" total_bugs="6" total_types="3" total_size="195" priority_2="2" priority_1="4">
+      <ClassStats class="edu.ncsu.csc216.garage.model.dealer.Manageable" sourceFile="Manageable.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.dealer.ServiceManager" sourceFile="ServiceManager.java" interface="false" size="80" bugs="2" priority_2="2"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.dealer.ServiceManagerTest" sourceFile="ServiceManagerTest.java" interface="false" size="105" bugs="4" priority_1="4"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.garage.model.service_garage" total_bugs="2" total_types="8" total_size="286" priority_2="2">
+      <ClassStats class="edu.ncsu.csc216.garage.model.service_garage.BayCarMismatchException" sourceFile="BayCarMismatchException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.service_garage.BayOccupiedException" sourceFile="BayOccupiedException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.service_garage.Garage" sourceFile="Garage.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.service_garage.GarageTest" sourceFile="GarageTest.java" interface="false" size="93" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.service_garage.HybridElectricBay" sourceFile="HybridElectricBay.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.service_garage.HybridElectricBayTest" sourceFile="HybridElectricBayTest.java" interface="false" size="67" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.service_garage.NoAvailableBayException" sourceFile="NoAvailableBayException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.service_garage.ServiceBay" sourceFile="ServiceBay.java" interface="false" size="40" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.garage.model.util" total_bugs="0" total_types="1" total_size="3">
+      <ClassStats class="edu.ncsu.csc216.garage.model.util.SimpleIterator" sourceFile="SimpleIterator.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.garage.model.vehicle" total_bugs="4" total_types="11" total_size="595" priority_2="3" priority_1="1">
+      <ClassStats class="edu.ncsu.csc216.garage.model.vehicle.BadVehicleInformationException" sourceFile="BadVehicleInformationException.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.vehicle.HybridElectricCar" sourceFile="HybridElectricCar.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.vehicle.HybridElectricCarTest" sourceFile="HybridElectricCarTest.java" interface="false" size="156" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.vehicle.RegularCar" sourceFile="RegularCar.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.vehicle.RegularCarTest" sourceFile="RegularCarTest.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.vehicle.Tiered" sourceFile="Tiered.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.vehicle.Vehicle" sourceFile="Vehicle.java" interface="false" size="68" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.vehicle.VehicleList" sourceFile="VehicleList.java" interface="false" size="118" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.vehicle.VehicleList$Cursor" sourceFile="VehicleList.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.vehicle.VehicleList$Node" sourceFile="VehicleList.java" interface="false" size="9" bugs="1" priority_2="1"/>
+      <ClassStats class="edu.ncsu.csc216.garage.model.vehicle.VehicleListTest" sourceFile="VehicleListTest.java" interface="false" size="133" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="edu.ncsu.csc216.garage.ui" total_bugs="9" total_types="5" total_size="430" priority_2="5" priority_1="4">
+      <ClassStats class="edu.ncsu.csc216.garage.ui.RepairGarageConsole" sourceFile="RepairGarageConsole.java" interface="false" size="81" bugs="3" priority_1="3"/>
+      <ClassStats class="edu.ncsu.csc216.garage.ui.RepairGarageGUI" sourceFile="RepairGarageGUI.java" interface="false" size="218" bugs="6" priority_2="5" priority_1="1"/>
+      <ClassStats class="edu.ncsu.csc216.garage.ui.UserDialog" sourceFile="UserDialog.java" interface="false" size="111" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.ui.UserDialog$1" sourceFile="UserDialog.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="edu.ncsu.csc216.garage.ui.UserDialog$2" sourceFile="UserDialog.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="387" invocations="1719" avgMicrosecondsPerInvocation="225" maxMicrosecondsPerInvocation="44893" standardDeviationMicrosecondsPerInvocation="1359"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="198" invocations="358" avgMicrosecondsPerInvocation="554" maxMicrosecondsPerInvocation="53302" standardDeviationMicrosecondsPerInvocation="2903"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="153" invocations="358" avgMicrosecondsPerInvocation="429" maxMicrosecondsPerInvocation="7484" standardDeviationMicrosecondsPerInvocation="871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="121" invocations="1723" avgMicrosecondsPerInvocation="70" maxMicrosecondsPerInvocation="703" standardDeviationMicrosecondsPerInvocation="36"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="120" invocations="860" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="34996" standardDeviationMicrosecondsPerInvocation="1196"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="115" invocations="130" avgMicrosecondsPerInvocation="890" maxMicrosecondsPerInvocation="82921" standardDeviationMicrosecondsPerInvocation="7233"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="115" invocations="2" avgMicrosecondsPerInvocation="57793" maxMicrosecondsPerInvocation="83860" standardDeviationMicrosecondsPerInvocation="26067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="62" invocations="161" avgMicrosecondsPerInvocation="389" maxMicrosecondsPerInvocation="3637" standardDeviationMicrosecondsPerInvocation="525"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="56" invocations="358" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="2478" standardDeviationMicrosecondsPerInvocation="301"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="52" invocations="28" avgMicrosecondsPerInvocation="1882" maxMicrosecondsPerInvocation="45382" standardDeviationMicrosecondsPerInvocation="8381"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="49" invocations="161" avgMicrosecondsPerInvocation="306" maxMicrosecondsPerInvocation="4505" standardDeviationMicrosecondsPerInvocation="559"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="49" invocations="130" avgMicrosecondsPerInvocation="379" maxMicrosecondsPerInvocation="5060" standardDeviationMicrosecondsPerInvocation="655"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="38" invocations="358" avgMicrosecondsPerInvocation="106" maxMicrosecondsPerInvocation="1635" standardDeviationMicrosecondsPerInvocation="218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="37" invocations="131" avgMicrosecondsPerInvocation="286" maxMicrosecondsPerInvocation="3683" standardDeviationMicrosecondsPerInvocation="444"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="34" invocations="1670" avgMicrosecondsPerInvocation="20" maxMicrosecondsPerInvocation="578" standardDeviationMicrosecondsPerInvocation="36"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="32" invocations="358" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="1106" standardDeviationMicrosecondsPerInvocation="142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="30" invocations="131" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="2242" standardDeviationMicrosecondsPerInvocation="333"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="29" invocations="358" avgMicrosecondsPerInvocation="83" maxMicrosecondsPerInvocation="1803" standardDeviationMicrosecondsPerInvocation="183"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1595357856212" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

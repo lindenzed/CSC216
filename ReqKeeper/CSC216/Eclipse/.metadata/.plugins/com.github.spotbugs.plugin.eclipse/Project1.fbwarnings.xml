@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.3" sequence="2" timestamp="1592625672518" analysisTimestamp="1592625671514" release="">
+  <Project projectName="Project1">
+    <Jar>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-P17\Project1\bin\edu\ncsu\csc216\tracker\model\RequirementsTrackerModel.class</Jar>
+    <AuxClasspathEntry>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-P17\Project1\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-P17\Project1\lib\RequirementsTrackerXML.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-P17\Project1\lib\activation-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-P17\Project1\lib\jaxb-api-2.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-P17\Project1\lib\jaxb-core-2.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-P17\Project1\lib\jaxb-impl-2.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-P17\Project1\lib\jaxb-runtime-2.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\zachs\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jdk-11.0.5\lib\jrt-fs.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-P17\Project1\test</SrcDir>
+    <SrcDir>C:\Users\zachs\OneDrive\Documents\CSC216\git\csc216-651-P17\Project1\src</SrcDir>
+  </Project>
+  <BugInstance type="IL_INFINITE_RECURSIVE_LOOP" priority="1" rank="9" abbrev="IL" category="CORRECTNESS" first="1" last="1" removedByChange="true">
+    <Class classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel">
+      <SourceLine classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" sourcefile="RequirementsTrackerModel.java" sourcepath="edu/ncsu/csc216/tracker/model/RequirementsTrackerModel.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" start="25" end="27" startBytecode="0" endBytecode="64" sourcefile="RequirementsTrackerModel.java" sourcepath="edu/ncsu/csc216/tracker/model/RequirementsTrackerModel.java"/>
+    </Method>
+    <SourceLine classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" start="26" end="26" startBytecode="8" endBytecode="8" sourcefile="RequirementsTrackerModel.java" sourcepath="edu/ncsu/csc216/tracker/model/RequirementsTrackerModel.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" first="1" last="1" removedByChange="true">
+    <Class classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel">
+      <SourceLine classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" sourcefile="RequirementsTrackerModel.java" sourcepath="edu/ncsu/csc216/tracker/model/RequirementsTrackerModel.java"/>
+    </Class>
+    <Method classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" name="&lt;init&gt;" signature="()V" isStatic="false">
+      <SourceLine classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" start="25" end="27" startBytecode="0" endBytecode="64" sourcefile="RequirementsTrackerModel.java" sourcepath="edu/ncsu/csc216/tracker/model/RequirementsTrackerModel.java"/>
+    </Method>
+    <Field classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" name="singleton" signature="Ledu/ncsu/csc216/tracker/model/RequirementsTrackerModel;" isStatic="true">
+      <SourceLine classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" sourcefile="RequirementsTrackerModel.java" sourcepath="edu/ncsu/csc216/tracker/model/RequirementsTrackerModel.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" start="26" end="26" startBytecode="11" endBytecode="11" sourcefile="RequirementsTrackerModel.java" sourcepath="edu/ncsu/csc216/tracker/model/RequirementsTrackerModel.java"/>
+    <SourceLine classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" start="26" end="26" startBytecode="11" endBytecode="11" sourcefile="RequirementsTrackerModel.java" sourcepath="edu/ncsu/csc216/tracker/model/RequirementsTrackerModel.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" rank="12" abbrev="UwF" category="CORRECTNESS" first="2">
+    <Class classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel">
+      <SourceLine classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" sourcefile="RequirementsTrackerModel.java" sourcepath="edu/ncsu/csc216/tracker/model/RequirementsTrackerModel.java"/>
+    </Class>
+    <Field classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" name="singleton" signature="Ledu/ncsu/csc216/tracker/model/RequirementsTrackerModel;" isStatic="true">
+      <SourceLine classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" sourcefile="RequirementsTrackerModel.java" sourcepath="edu/ncsu/csc216/tracker/model/RequirementsTrackerModel.java"/>
+    </Field>
+    <SourceLine classname="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" start="33" end="33" startBytecode="0" endBytecode="0" sourcefile="RequirementsTrackerModel.java" sourcepath="edu/ncsu/csc216/tracker/model/RequirementsTrackerModel.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sat, 20 Jun 2020 00:01:03 -0400" total_classes="1" referenced_classes="11" total_bugs="1" total_size="23" num_packages="1" java_version="11.0.5" vm_version="11.0.5+10-LTS" cpu_seconds="3.67" clock_seconds="1.06" peak_mbytes="489.28" alloc_mbytes="1024.00" gc_seconds="0.09" priority_2="1">
+    <PackageStats package="edu.ncsu.csc216.tracker.model" total_bugs="1" total_types="1" total_size="23" priority_2="1">
+      <ClassStats class="edu.ncsu.csc216.tracker.model.RequirementsTrackerModel" sourceFile="RequirementsTrackerModel.java" interface="false" size="23" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="367" invocations="305" avgMicrosecondsPerInvocation="1203" maxMicrosecondsPerInvocation="33569" standardDeviationMicrosecondsPerInvocation="3041"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="290" invocations="2" avgMicrosecondsPerInvocation="145336" maxMicrosecondsPerInvocation="273836" standardDeviationMicrosecondsPerInvocation="128499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="45" invocations="306" avgMicrosecondsPerInvocation="149" maxMicrosecondsPerInvocation="845" standardDeviationMicrosecondsPerInvocation="68"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="31" invocations="272" avgMicrosecondsPerInvocation="116" maxMicrosecondsPerInvocation="7703" standardDeviationMicrosecondsPerInvocation="486"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1592625611979" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1592625611983" release="" codeSize="24" numClasses="1"/>
+  </History>
+</BugCollection>

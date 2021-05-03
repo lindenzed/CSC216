@@ -1,0 +1,194 @@
+package edu.ncsu.csc216.pack_scheduler.manager;
+
+import java.io.FileInputStream;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Properties;
+
+import edu.ncsu.csc216.pack_scheduler.catalog.CourseCatalog;
+import edu.ncsu.csc216.pack_scheduler.directory.StudentDirectory;
+import edu.ncsu.csc216.pack_scheduler.user.Student;
+import edu.ncsu.csc216.pack_scheduler.user.User;
+
+/**
+ * This class is a singleton class that holds a CourseCatalog of Courses, a StudentDirectory
+ * of students, and verifies the user trying to use the program as a Student or Registrar. 
+ * Student verification is done by searching the StudentDirectory, Registrar verification is done
+ * by looking at a local properties file.
+ * 
+ * @author Zach Giles
+ *
+ */
+public class RegistrationManager {
+	
+	/**Singleton instance of Registration Manager*/
+	private static RegistrationManager instance;
+	/**Course catalog that holds Courses*/
+	  private CourseCatalog courseCatalog;
+	  /**Student directory that holds Students*/
+	private StudentDirectory studentDirectory;
+	/**The registrar user that matches info in properties file*/
+	  private User registrar;
+	  /**The current user of the Registration Manager*/
+	   private User currentUser;
+	/** Hashing algorithm */
+	private static final String HASH_ALGORITHM = "SHA-256";
+	/**The properties file that holds the registrar's information*/
+	private static final String PROP_FILE = "registrar.properties";
+
+	/**Creates the Registration Manager and the Registrar User by calling a inner function*/
+	private RegistrationManager() {
+		createRegistrar();
+	}
+	
+	/**Creates the Registrar user from a properties file
+	 * @throws IllegalArgumentException if the registar cannot be created
+	 * */
+	private void createRegistrar() {
+		Properties prop = new Properties();
+		
+		try (InputStream input = new FileInputStream(PROP_FILE)) {
+			prop.load(input);
+			
+			String hashPW = hashPW(prop.getProperty("pw"));
+			
+			registrar = new Registrar(prop.getProperty("first"), prop.getProperty("last"), prop.getProperty("id"), prop.getProperty("email"), hashPW);
+		} catch (IOException e) {
+			throw new IllegalArgumentException("Cannot create registrar.");
+		}
+	}
+	
+	/**
+	 * Hashes a text password using SHA-256 algorithm
+	 * @param pw the text password to be hashed
+	 * @return the hashed password
+	 * @throws IllegalArgumentException if the password cannot be hashed.
+	 */
+	private String hashPW(String pw) {
+		try {
+			MessageDigest digest1 = MessageDigest.getInstance(HASH_ALGORITHM);
+			digest1.update(pw.getBytes());
+			return new String(digest1.digest());
+		} catch (NoSuchAlgorithmException e) {
+			throw new IllegalArgumentException("Cannot hash password");
+		}
+	}
+	
+	/**
+	 * Public function used to create the singleton instance (ensures singleton as well).  Needed 
+	 * since constructor is private for singleton.
+	 * @return a new RegistrationManager Object
+	 */
+	public static RegistrationManager getInstance() {
+		  if (instance == null) {
+			instance = new RegistrationManager();
+		}
+		return instance;
+	}
+	
+	/**
+	 * Returns the CourseCatalog used to hold the Courses for the RegistrationManager
+	 * @return a The CourseCatalog used for the RegistrationManager
+	 */
+	public CourseCatalog getCourseCatalog() {
+		return courseCatalog;
+	}
+	
+	/**
+	 * Returns the StudentDirectory used to hold the Students for the RegistrationManager
+	 * @return a The StudentDirectory used for the RegistrationManager
+	 */
+	public StudentDirectory getStudentDirectory() {
+		return studentDirectory;
+	}
+
+	/**
+	 * Logins in a User. The User can either be a Student or a Registrar.  The function checks if the User
+	 * is a Student by comparing the parameter id to the ID's in the StudentDirectory object used to hold
+	 * the Students. If the ID is found and the password matches the currentUser is set to the Student who
+	 * logged in. If the id doesn't match any Students the fucntion checks to see if the id and password match
+	 * for the Registrar whos information is stored in the local properties file. If the information (id/password)
+	 * matches the User is logged in as a Registar User.
+	 * @param id of the person trying to login
+	 * @param password password for the given id of the User trying to login 
+	 * @return true if a User is logged in.
+	 * @throws IllegalArgumentException if the parameter password cannot be hashed.
+	 */
+	public boolean login(String id, String password) {
+		logout();
+		if (registrar.getId().equals(id)) {
+			MessageDigest digest;
+		try {
+		digest = MessageDigest.getInstance(HASH_ALGORITHM);
+			digest.update(password.getBytes());
+			String localHashPW = new String(digest.digest());
+		if (registrar.getPassword().equals(localHashPW)) {
+			currentUser = registrar;
+				return true;
+		}
+		else { return false; }
+		} catch (NoSuchAlgorithmException e) {
+			throw new IllegalArgumentException();
+		}
+	}
+			Student s = studentDirectory.getStudentById(id);
+			if (s == null) {
+				throw new IllegalArgumentException("User doesn't exist.");
+			}
+			try {
+				MessageDigest digest = MessageDigest.getInstance(HASH_ALGORITHM);
+				digest.update(password.getBytes());
+				String localHashPW = new String(digest.digest());
+				if (s.getPassword().equals(localHashPW)) {
+					currentUser = studentDirectory.getStudentById(id);
+						return true;
+				}
+				} catch (NoSuchAlgorithmException e) {
+						throw new IllegalArgumentException();
+				}	
+				return false;
+	}
+
+	/**
+	 * Logs out the current user by setting the currentUser variable to null.
+	 */
+	public void logout() {
+		currentUser = null;
+	}
+	
+	/**
+	 * Returns the current user
+	 * @return the current user logged in to the system
+	 */
+	public User getCurrentUser() {
+		return currentUser;
+	}
+	
+	/**
+	 * Creates a new CourseCatalog and StudentDirectory that in effect
+	 * clears the current data in those Objects.
+	 */
+	public void clearData() {
+		courseCatalog = new CourseCatalog();
+		studentDirectory = new StudentDirectory();
+	}
+	
+	/**
+	 * Inner Class for the Registar User
+	 * Creates a concrete User that is a child of the abstract class User
+	 * @author Zach Giles
+	 *
+	 */
+	private static class Registrar extends User {
+		/**
+		 * Create a Registrar User from the paremeters passed. In this case these are 
+		 * stored in a local properties file.
+		 */
+		public Registrar(String firstName, String lastName, String id, String email, String hashPW) {
+			super(firstName, lastName, id, email, hashPW);
+		}
+	}
+}

@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.tracker.model;
+
+/**
+ * A container class that holds a list of Requirement objects.  Has functionality
+ * to add/remove Requirements, search for a Requirement, update a Requirement,
+ * and the ability to return a list or sublist of Requirements contained in the RequirementList
+ * @author Zach Giles
+ *
+ */
+public class RequirementsList {
+
+	/**
+	 * Creates an empty RequirementsList
+	 */
+	public RequirementsList() {
+		
+	}
+	
+	public int addRequirement(String summary, String acceptanceTestId) {
+		return null;
+	}
+}

@@ -1,0 +1,76 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.tracker.model;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+/**
+ * Test suite for the RequirementList Class
+ * 
+ * @author Zach Giles
+ *
+ */
+public class RequirementsListTest {
+
+	/**
+	 * Test method for {@link edu.ncsu.csc216.tracker.model.RequirementsList#RequirementsList()}.
+	 * Test the RequirementsList Constructor 
+	 */
+	@Test
+	public void testRequirementsList() {
+		RequirementsList reqList = new RequirementsList();
+		assertTrue(reqList.getRequirements().size() == 0);
+	}
+
+	/**
+	 * Test method for {@link edu.ncsu.csc216.tracker.model.RequirementsList#addRequirement(java.lang.String, java.lang.String)}.
+	 */
+	@Test
+	public void testAddRequirement() {
+		fail("Not yet implemented");
+	}
+
+	/**
+	 * Test method for {@link edu.ncsu.csc216.tracker.model.RequirementsList#addXMLReqs(java.util.List)}.
+	 */
+	@Test
+	public void testAddXMLReqs() {
+		fail("Not yet implemented");
+	}
+
+	/**
+	 * Test method for {@link edu.ncsu.csc216.tracker.model.RequirementsList#getRequirements()}.
+	 */
+	@Test
+	public void testGetRequirements() {
+		fail("Not yet implemented");
+	}
+
+	/**
+	 * Test method for {@link edu.ncsu.csc216.tracker.model.RequirementsList#getRequirementById(int)}.
+	 */
+	@Test
+	public void testGetRequirementById() {
+		fail("Not yet implemented");
+	}
+
+	/**
+	 * Test method for {@link edu.ncsu.csc216.tracker.model.RequirementsList#executeCommand(int, edu.ncsu.csc216.tracker.requirement.Command)}.
+	 */
+	@Test
+	public void testExecuteCommand() {
+		fail("Not yet implemented");
+	}
+
+	/**
+	 * Test method for {@link edu.ncsu.csc216.tracker.model.RequirementsList#deleteRequirementById(int)}.
+	 */
+	@Test
+	public void testDeleteRequirementById() {
+		fail("Not yet implemented");
+	}
+
+}

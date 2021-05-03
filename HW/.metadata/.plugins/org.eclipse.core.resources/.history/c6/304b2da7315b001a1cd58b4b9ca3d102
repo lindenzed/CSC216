@@ -1,0 +1,43 @@
+import java.util*;
+import java.io*;
+/**
+ *Takes the Hamlet.txt file from exercise 13 and makes it double spaced.
+ *
+ * @author Zach Giles
+ *
+ * @version 29Feb2020
+ */
+public class HamletDouble {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        userInterface();
+
+    }
+    
+    public static void userInterface() {
+        Scanner console = new Scanner(System.in);
+        doubleSpaceFile();
+    }
+    
+    public static PrintSteam doubleSpaceFile() {
+        Scanner readFile = null;
+        PrintStream output = null;
+        File hamlet = new File("hamlet.txt");
+        try {
+            readFile = new Scanner(hamlet);
+            output = new PrintStream("HamletOutput.txt");
+        }
+        catch (FileNotFoundException e) {
+            
+        }
+        
+        
+    }
+    
+    
+    
+
+}

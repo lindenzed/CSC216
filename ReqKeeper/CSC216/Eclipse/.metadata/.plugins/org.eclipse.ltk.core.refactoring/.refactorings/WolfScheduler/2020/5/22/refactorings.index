@@ -1,0 +1,7 @@
+1590429143786	Extract superclass 'Activity'
+1590430464379	Rename method 'setCourseTime'
+1590505599272	Move member 'writeCourseRecords'
+1590505840561	Rename method 'writeCourseRecords'
+1590510913738	Change method 'removeCourse'
+1590541076057	Delete element
+1590542992851	Delete element

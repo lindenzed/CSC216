@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;fileName&apos; in &apos;edu.ncsu.csc216.pack_scheduler.io.StudentRecordIOTest&apos; to &apos;FILE_NAME&apos;&#x0D;&#x0A;- Original project: &apos;PackScheduler&apos;&#x0D;&#x0A;- Original element: &apos;edu.ncsu.csc216.pack_scheduler.io.StudentRecordIOTest.fileName&apos;&#x0D;&#x0A;- Renamed element: &apos;edu.ncsu.csc216.pack_scheduler.io.StudentRecordIOTest.FILE_NAME&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;fileName&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/test&lt;edu.ncsu.csc216.pack_scheduler.io{StudentRecordIOTest.java[StudentRecordIOTest^fileName" name="FILE_NAME" references="true" setter="false" stamp="1590518804002" textual="false" version="1.0"/>
+</session>

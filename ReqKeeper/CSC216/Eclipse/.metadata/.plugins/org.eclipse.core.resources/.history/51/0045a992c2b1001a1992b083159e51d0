@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.tracker.model;
+
+/**
+ * @author zachs
+ *
+ */
+public class RequirementsList {
+
+}

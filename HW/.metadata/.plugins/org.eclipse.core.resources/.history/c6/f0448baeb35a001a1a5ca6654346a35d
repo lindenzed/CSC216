@@ -1,0 +1,22 @@
+
+/**
+ *Reads the weather file RaleighWeather2010.txt, process the data line
+ *by line, and the outputs the processed information into a PrintStream
+ *object that is a text file.
+ *
+ * @author Zach Giles
+ *
+ * @version 29Feb2020
+ */
+public class WeatherReporter {
+
+    /**
+     * Starts the program
+     * @param args Command line arguments (not used).
+     */
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+    }
+
+}

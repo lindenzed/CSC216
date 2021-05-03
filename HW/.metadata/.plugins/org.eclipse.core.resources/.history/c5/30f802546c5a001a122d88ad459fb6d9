@@ -1,0 +1,70 @@
+import java.io.*;
+import java.util.*;
+
+/**
+ *INSERT PROJECT DESCRIPTION
+ *
+ * @author Zach Giles
+ *
+ * @version 27Feb2020
+ */
+public class LineProcessing {
+
+    /**
+     * Starts the program.
+     * @param args Command line arguments (not used).
+     */
+    public static void main(String[] args) {
+        userInterface();
+    }
+    
+    public static void userInterface() {
+        Scanner console = new Scanner(System.in);
+        Scanner fileScanner = getInputScanner(console);
+        processFile(fileScanner);
+        fileScanner.close();
+        
+    }
+    
+    public static Scanner getInputScanner(Scanner console) {
+        Scanner fileScanner = null;
+        while (fileScanner == null) {
+            System.out.print("Input file name: ");
+            String name = console.next();
+            try {
+                fileScanner = new Scanner(new File(name));
+            }
+            catch (FileNotFoundException e) {
+                System.out.println("File: " + name + " not found. Please try again");
+            }
+        }
+        return fileScanner;
+    }
+    
+    public static void processFile(Scanner fileScanner) {
+        int countToken = 0;
+        int countLine = 0;
+        int tokenCounter = 0;
+        int longestToken = 0;
+        while (fileScanner.hasNextLine()) {
+            countLine++;
+            String line = fileScanner.nextLine();
+            Scanner stringScanner = new Scanner(line);
+            System.out.println(line);
+            while (stringScanner.hasNext()) {
+                countToken++;
+                System.out.println(countToken);
+                stringScanner.next();
+            }
+/*                Scanner tokenScanner = new Scanner(stringScanner.next());
+                while (tokenScanner.hasNext()) {
+                    tokenCounter++;
+                }
+                if (tokenCounter > longestToken) {
+                    longestToken = tokenCounter;
+                }
+            }*/
+            }
+            
+            }
+    }

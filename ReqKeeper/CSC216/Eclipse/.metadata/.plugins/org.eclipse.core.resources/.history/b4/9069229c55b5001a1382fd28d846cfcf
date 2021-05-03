@@ -1,0 +1,253 @@
+package edu.ncsu.csc216.pack_scheduler.course;
+
+import java.util.Objects;
+/**
+ * Creates a superclass Activity for the Course and Event
+ * children.  Superclass instance variables include the time
+ * boundaries for meeting times, title, meeting days, with
+ * start and end times. Common superclass methods include
+ * setting the title and meeting time, with meeting time 
+ * conversion to 12 hour clock. Time is common across
+ * any Activity so these methods aren't abstract.
+ *  Abstract methods include
+ * creating String arrays to display Activity information, and 
+ * testing for duplicate Activities. These are abstract since 
+ * different children could have different fields to display.
+ * @author Zach Giles
+ *
+ */
+abstract public class Activity implements Conflict {
+
+	/**Declares the upper boundary for time on a 24 hour clock*/
+	private static final int UPPER_TIME = 2400;
+	/**Declares the upper boundary for counting an hour in minutes*/
+	private static final int UPPER_HOUR = 60;
+	/** Activity's title. */
+	private String title;
+	/** Activity's meeting days */
+	private String meetingDays;
+	/** Activity's starting time */
+	private int startTime;
+	/** Activity's ending time */
+	private int endTime;
+
+	/**
+	 * Constructs an Activity with a title, meeting days, start, and end time.  
+	 * This is a superclass used for Course and Event children.
+	 * @param title The Activity title
+	 * @param meetingDays The days of the week the Activity meets, or 
+	 * 'A' for arranged.
+	 * @param startTime The start time for the Activity
+	 * @param endTime The end time for the Activity
+	 */
+	public Activity(String title, String meetingDays, int startTime, int endTime) {
+		this.setTitle(title);
+		this.setMeetingDays(meetingDays);
+		this.setActivityTime(startTime, endTime);
+	}
+
+	/**
+	 * Returns the Activity's title.
+	 * @return the title
+	 */
+	public String getTitle() {
+		return title;
+	}
+
+	/**
+	 * Sets the Activity's title. Throws IllegalArgumentExeption if title
+	 * name is null or empty.
+	 * @param title the title to set
+	 * @throws IllegalArgumentException if title name is null or empty
+	 */
+	public void setTitle(String title) {
+		if (title == null || title.equals("")) {
+			throw new IllegalArgumentException("title null or empty");
+		}
+		this.title = title;
+	}
+
+	/**
+	 * Returns the days the Activity meets.
+	 * @return the meetingDays
+	 */
+	public String getMeetingDays() {
+		return meetingDays;
+	}
+
+/**
+ * Sets the meeting days input from a child to the private instance. 
+ * @param meetingDays returned from child
+ */
+	public void setMeetingDays(String meetingDays) {
+		this.meetingDays = meetingDays;
+	}
+
+	/**
+	 * Returns the starting time for the Activity.
+	 * @return the startTime
+	 */
+	public int getStartTime() {
+		return startTime;
+	}
+
+	/**
+	 * Returns the ending time for the Activity.
+	 * @return the endTime
+	 */
+	public int getEndTime() {
+		return endTime;
+	}
+
+	/**
+	 * Sets the start and end time for the Activity. If Arranged Activity sets the start and end
+	 * times to 0.
+	 * @param startTime the Activity start time
+	 * @param endTime the Activity end time
+	 * @throws IllegalArgumentException if end time is less than start time,  times aren't within 
+	 * 24 hour clock, or minutes are invalid.
+	 */
+	public void setActivityTime(int startTime, int endTime) {
+		if (endTime < startTime) {
+			throw new IllegalArgumentException("end time is less than start time");
+		}
+		if (startTime < 0 || endTime < 0 || startTime >= UPPER_TIME || endTime >= UPPER_TIME) {
+			throw new IllegalArgumentException("start time or end time is not within 24 hour clock");
+		}
+		if (startTime % 100 >= UPPER_HOUR || endTime % 100 >= UPPER_HOUR) {
+			throw new IllegalArgumentException("time minutes not valid must be between 00 and 60");
+		}
+		this.startTime = startTime;
+		this.endTime = endTime;
+		if (this.meetingDays.contains("A") && (this.startTime != 0 || this.endTime != 0)) {
+			throw new IllegalArgumentException("Arranged can not list a start/end time");
+		}
+	}
+
+	/**
+	 * Reformats the Activity start and end times to a 12 hour clock
+	 * with AM/PM, and creates a string combining the newly
+	 * formatted times with the meeting days.
+	 * @return String that displays the meeting days and start and end times
+	 * on a 12 hour clock format. If Arranged Activity returns "Arranged"
+	 */
+	public String getMeetingString() {
+		String startString = "";
+		String endString = "";
+		String startAMPM = "AM";
+		String endAMPM = "AM";
+		int startHours = this.startTime / 100;
+		int endHours = this.endTime / 100;
+		int startMinutes = this.startTime % 100;
+		int endMinutes = this.endTime % 100;
+		if (!this.meetingDays.contains("A")) {
+			if (startHours >= 12) {
+				if (startHours > 12) {
+					startHours -= 12;
+				}
+				startAMPM = "PM";
+			}
+			if (endHours >= 12) {
+				if (endHours > 12) {
+					endHours -= 12;
+				}
+				endAMPM = "PM";
+			}
+			if (startMinutes < 10) {
+				startString += startHours + ":" + "0" + startMinutes + startAMPM;
+			}
+			else {
+				startString += startHours + ":" + startMinutes + startAMPM;
+			}
+			if (endMinutes < 10) {
+				endString += endHours + ":" + "0" + endMinutes + endAMPM;
+			}
+			else {
+				endString += endHours + ":" + endMinutes + endAMPM;
+			}
+			return this.meetingDays + " " + startString + "-" + endString;
+		}
+		else {
+			return "Arranged";
+		}
+	}
+
+	/**
+	 * Generates hash Code for an Activity Object.
+	 */
+	@Override
+	public int hashCode() {
+		return Objects.hash(endTime, meetingDays, startTime, title);
+	}
+
+	/**
+	 * Compares two Activity Objects for equality.
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Activity other = (Activity) obj;
+		return endTime == other.endTime && Objects.equals(meetingDays, other.meetingDays)
+				&& startTime == other.startTime && Objects.equals(title, other.title);
+	}
+	
+	/**
+	 * Creates a String array for used in displaying the Activity information
+	 * to the GUI.  The "short" version typically has 3-4 parameters, and is typically
+	 * used in the final summary page of the GUI before saving the file.
+	 * @return A String array with abridged Activity information
+	 */
+	public abstract String[] getShortDisplayArray();
+	
+	/**
+	 * Creates a String array for used in displaying the Activity information
+	 * to the GUI.  The "long" version typically has 6-7 parameters, and is typically
+	 * used in the initial screen when you are signing up for the Activity so you
+	 * can see all of the details.
+	 * @return A String array with unabridged Activity information
+	 */
+	public abstract String[] getLongDisplayArray();
+
+	/**
+	 * Abstract method to determine if the passed Activity
+	 * is already present (i.e. duplicate) on an Activity schedule.
+	 * @param activity Activity to search for duplicity
+	 * @return true if already present of Activity schedule
+	 */
+	public abstract boolean isDuplicate(Activity activity);
+
+	@Override
+	public void checkConflict(Activity possibleConflictingActivity) throws ConflictException {
+		String thisActivityDays = this.getMeetingDays();
+		String proposedActivityDays = possibleConflictingActivity.getMeetingDays();
+		for (int i = 0; i < thisActivityDays.length(); i++) {
+			for (int j = 0; j < proposedActivityDays.length(); j++) {
+				if (thisActivityDays.charAt(i) == proposedActivityDays.charAt(j) && (thisActivityDays.charAt(i) != 'A' && proposedActivityDays.charAt(j) != 'A')) {
+					String message = "";
+					if ((possibleConflictingActivity.getStartTime() > this.getStartTime() && possibleConflictingActivity.getStartTime() < this.getEndTime()) ||
+							(possibleConflictingActivity.getEndTime() < this.getEndTime() && possibleConflictingActivity.getEndTime() > this.getStartTime()) ||
+							(this.getStartTime() > possibleConflictingActivity.getStartTime() && this.getStartTime() < possibleConflictingActivity.getEndTime()) ||
+							(this.getEndTime() < possibleConflictingActivity.getEndTime() && this.getEndTime() > possibleConflictingActivity.getStartTime()) ||
+							this.getStartTime() == possibleConflictingActivity.getStartTime() ||
+							this.getEndTime() == possibleConflictingActivity.getEndTime() ||
+							this.getStartTime() == possibleConflictingActivity.getEndTime() ||
+							this.getEndTime() == possibleConflictingActivity.getStartTime()) {
+						if (possibleConflictingActivity.getClass().toString().equals("class edu.ncsu.csc216.pack_scheduler.course.Course")) {
+							message = "The course cannot be scheduled due to a conflict.";
+					}
+						else if (possibleConflictingActivity.getClass().toString().equals("class edu.ncsu.csc216.pack_scheduler.course.Event")) {
+							message = "The event cannot be scheduled due to a conflict.";
+						}
+						throw new ConflictException(message);
+					}
+				}
+			}
+		}
+	}
+
+}

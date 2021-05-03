@@ -1,0 +1,216 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.pack_scheduler.course;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+/**
+ * Test case to test the implemented method checkConflict() in 
+ * the Activity superclass.  Only testing this method in the Activity
+ * class since test classes for the other methods are provided
+ * by teaching staff.
+ * @author Zach Giles
+ *
+ */
+public class ActivityTest {
+
+	/**
+	 * Test method for {@link edu.ncsu.csc216.wolf_scheduler.course.Activity#checkConflict(edu.ncsu.csc216.wolf_scheduler.course.Activity)}.
+	 * Test the checkConflict() method in the Activity class that checks
+	 * for an existing Activity conflict on an Activity schedule.
+	 */
+	@Test
+	public void testCheckConflict() {
+		//Test no conflict
+		Activity a1 = new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1330, 1445);
+		Activity a2 = new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "TH", 1330, 1445);
+		try {
+			a1.checkConflict(a2);
+			assertEquals("Incorrect meeting String for this Activity.", "MW 1:30PM-2:45PM", a1.getMeetingString());
+			assertEquals("Incorrect meeting String for possibleConflictingActivity.", "TH 1:30PM-2:45PM", a2.getMeetingString());
+		}
+		catch (ConflictException e) {
+			fail("A ConflictException was thrown when two Activities at the same time on completely distanct days were compared");
+		}
+		//Test two day conflict
+		a1.setMeetingDays("TH");
+		a1.setActivityTime(1445, 1530);
+		try {
+			a1.checkConflict(a2);
+			fail("Exception was not thrown on two Activities that were designed to have a conflict");
+		}
+		catch (ConflictException e) {
+			assertEquals("TH 2:45PM-3:30PM", a1.getMeetingString());
+			assertEquals("TH 1:30PM-2:45PM", a2.getMeetingString());
+			assertEquals("The course cannot be scheduled due to a conflict.", e.getMessage());
+		}
+		//Test one day conflict
+		a1.setMeetingDays("H");
+		try {
+			a1.checkConflict(a2);
+			fail("Exception was not thrown on two Activities that were designed to have a conflict");
+		}
+		catch (ConflictException e) {
+			assertEquals("H 2:45PM-3:30PM", a1.getMeetingString());
+			assertEquals("TH 1:30PM-2:45PM", a2.getMeetingString());
+			assertEquals("The course cannot be scheduled due to a conflict.", e.getMessage());
+		}
+		//Test start time equals end time
+		a1.setMeetingDays("T");
+		a1.setActivityTime(1445, 1508);
+		try {
+			a1.checkConflict(a2);
+			fail("Exception was not thrown on two Activities that were designed to have a conflict");
+		}
+		catch (ConflictException e) {
+			assertEquals("T 2:45PM-3:08PM", a1.getMeetingString());
+			assertEquals("TH 1:30PM-2:45PM", a2.getMeetingString());
+			assertEquals("The course cannot be scheduled due to a conflict.", e.getMessage());
+		}
+		//Test end time equals start time
+		a1.setActivityTime(1200, 1330);
+		try {
+			a1.checkConflict(a2);
+			fail("Exception was not thrown on two Activities that were designed to have a conflict");
+		}
+		catch (ConflictException e) {
+			assertEquals("T 12:00PM-1:30PM", a1.getMeetingString());
+			assertEquals("TH 1:30PM-2:45PM", a2.getMeetingString());
+			assertEquals("The course cannot be scheduled due to a conflict.", e.getMessage());
+		}
+		//Test Arranged Course
+		a1.setMeetingDays("A");
+		try {
+			a1.checkConflict(a2);
+			assertEquals("Arranged", a1.getMeetingString());
+			assertEquals("TH 1:30PM-2:45PM", a2.getMeetingString());
+		}
+		catch (ConflictException e) {
+			fail("Conflict should not be thown when Arranged");
+		}
+		/*/Test conflicting Event message
+		a1 = new Event("Test Event", "T", 1200, 1330, 1, "Hope this passes");
+		a2 = new Event("Test Event 2", "TH", 1330, 1445, 1, "Me too");
+		try {
+			a1.checkConflict(a2);
+			fail("Exception was not thrown on two Activities that were designed to have a conflict");
+		}
+		catch (ConflictException e) {
+			assertEquals("T 12:00PM-1:30PM (every 1 weeks)", a1.getMeetingString());
+			assertEquals("TH 1:30PM-2:45PM (every 1 weeks)", a2.getMeetingString());
+			assertEquals("The event cannot be scheduled due to a conflict.", e.getMessage());
+		}*/
+	}
+		/**
+		 * Test setting the activity time.
+		 */
+		@Test
+		public void testActivtyTime() {
+			//Valid Activity
+			Activity a1 = new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1330, 1445);
+			//Test end time less than start time
+			try {
+				a1.setActivityTime(1330, 1200);
+				fail();
+			}
+			catch (IllegalArgumentException e) {
+				assertEquals("end time is less than start time", e.getMessage());
+			}
+			//test time less than 0
+			try {
+				a1.setActivityTime(-1, 1200);
+				fail();
+			}
+			catch (IllegalArgumentException e) {
+				assertEquals("start time or end time is not within 24 hour clock", e.getMessage());
+			}
+			//test invalid minutes
+			try {
+				a1.setActivityTime(1260, 1300);
+				fail();
+			}
+			catch (IllegalArgumentException e) {
+					assertEquals("time minutes not valid must be between 00 and 60", e.getMessage());
+			}
+			//test arranged days with times given
+			try {
+				a1 =  new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "A", 1330, 1445);
+				fail();
+			}
+			catch (IllegalArgumentException e) {
+				assertEquals("Arranged can not list a start/end time", e.getMessage());
+			}
+		}
+		/**
+		 * Test setting the Activity title
+		 */
+		@Test
+		public void testSetTitle() {
+			//Valid activity
+			Activity a1 =  new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1330, 1445);
+			//empty title
+			try {
+				a1.setTitle("");
+				fail();
+			}
+			catch (IllegalArgumentException e) {
+				assertEquals("title null or empty", e.getMessage());
+			}
+		}
+		/**
+		 * Test equals method.
+		 */
+		@Test
+		public void testEquals() {
+			//valid activity
+			Activity a1 =  new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1330, 1445);
+			//another valid activity same as a1
+			Activity a2 =  new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1330, 1445);
+			//valid not equal
+			Activity a3 = new Course("CSC187", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1330, 1445);
+			assertTrue(a1.equals(a2)); //two different but equal objects
+			assertTrue(a1.equals(a1)); //self
+			a2 = null;
+			assertFalse(a1.equals(a2));
+			assertFalse(a1.equals("String"));
+			assertFalse(a1.equals(a3));
+		}
+		/**
+		 * Test getting the Title
+		 */
+		@Test
+		public void testGetTitle() {
+			Activity a1 =  new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1330, 1445);
+			assertTrue("Programming Concepts - Java".equals(a1.getTitle()));
+		}
+		/**
+		 * Test hash code
+		 */
+		@Test
+		public void testHashCode() {
+			//valid activity
+			Activity a1 =  new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1330, 1445);
+			//another valid activity same as a1
+			Activity a2 =  new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1330, 1445);
+			Activity a3 =  new Course("CSC187", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1330, 1445);
+			Activity a4 =  new Course("CSC216", "Programming Concepts", "001", 4, "sesmith5", "MW", 1330, 1445);
+			Activity a5 =  new Course("CSC216", "Programming Concepts - Java", "002", 4, "sesmith5", "MW", 1330, 1445);
+			Activity a6 =  new Course("CSC216", "Programming Concepts - Java", "001", 3, "sesmith5", "MW", 1330, 1445);
+			Activity a7 =  new Course("CSC216", "Programming Concepts - Java", "001", 4, "zgiles", "MW", 1330, 1445);
+			Activity a8 =  new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "M", 1330, 1445);
+			Activity a9 =  new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1200, 1445);
+			Activity a10 =  new Course("CSC216", "Programming Concepts - Java", "001", 4, "sesmith5", "MW", 1330, 1545);
+			assertEquals(a1.hashCode(), a2.hashCode());
+			assertNotEquals(a1.hashCode(), a3.hashCode());
+			assertNotEquals(a1.hashCode(), a4.hashCode());
+			assertNotEquals(a1.hashCode(), a5.hashCode());
+			assertNotEquals(a1.hashCode(), a6.hashCode());
+			assertNotEquals(a1.hashCode(), a7.hashCode());
+			assertNotEquals(a1.hashCode(), a8.hashCode());
+			assertNotEquals(a1.hashCode(), a9.hashCode());
+			assertNotEquals(a1.hashCode(), a10.hashCode());
+		}
+}

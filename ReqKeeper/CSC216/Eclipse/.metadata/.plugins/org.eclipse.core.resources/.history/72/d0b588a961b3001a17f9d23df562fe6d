@@ -1,0 +1,186 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.tracker.requirement;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import edu.ncsu.csc216.tracker.requirement.enums.CommandValue;
+import edu.ncsu.csc216.tracker.requirement.enums.Rejection;
+import edu.ncsu.csc216.tracker.xml.Req;
+import edu.ncsu.csc216.tracker.xml.RequirementIOException;
+import edu.ncsu.csc216.tracker.xml.RequirementsReader;
+
+/**
+ * This test suite test the constructors, getters, setters, and state changers
+ * for the Requirement class
+ * 
+ * @author Zach Giles
+ *
+ */
+public class RequirementTest {
+
+	/**
+	 * Test method for two string constructor of Requirement object.
+	 */
+	@Test
+	public void testRequirementStringString() {
+		Requirement r = new Requirement("Submitted", "summary");
+		assertEquals(r.getSummary(), "summary");
+		assertEquals(r.getState().getStateName(), "Submitted");
+	}
+
+	/**
+	 * Test method for making a Requirement from an XML Req
+	 * Creates a valid Requirement from an XML Req and then 
+	 * checks each Req instance variable against the Requirement Object
+	 * instance value that should get assigned from the XML Req to see
+	 * if they are equal
+	 */
+	@Test
+	public void testRequirementReq() {
+		try {
+			RequirementsReader io = new RequirementsReader("test_files/req1.xml");
+			//pull the valid Verified XML Req
+			Req r = io.getReqs().get(5);
+			Requirement req = new Requirement(r);
+			assertEquals(r.getSummary(), req.getSummary());
+			assertEquals(r.getId(), req.getRequirementId());
+			assertEquals(r.getDeveloper(), req.getDeveloper());
+			assertEquals(r.getTest(), req.getAcceptanceTestId());
+			assertEquals(r.getEstimate(), req.getEstimate());
+			assertEquals(r.getPriority(), req.getPriority());
+			assertEquals(r.getState(), req.getState().getStateName());
+			assertEquals(r.getState(), "Verified");
+		}
+		catch (RequirementIOException e) {
+			fail();
+		}
+
+		
+	}
+
+	/**
+	 * Test method for get and set Acceptance Test Id
+	 */
+	@Test
+	public void testAcceptanceTestId() {
+		Requirement r = new Requirement("Submitted", "summary");
+		r.setAcceptanceTestId("test");
+		assertEquals(r.getAcceptanceTestId(), "test");
+	}
+
+	/**
+	 * Test method for get and set developer
+	 */
+	@Test
+	public void testSetDeveloper() {
+		Requirement r = new Requirement("Submitted", "summary");
+		r.setDeveloper("zgiles");
+		assertEquals(r.getDeveloper(), "zgiles");
+	}
+
+	/**
+	 * Test method for getRejectionReason and getRejectionReasonString
+	 */
+	@Test
+	public void testGetRejectionReason() {
+		try {
+			RequirementsReader io = new RequirementsReader("test_files/req1.xml");
+			//pull the valid Rejected XML Req
+			Req r = io.getReqs().get(4);
+			Requirement req = new Requirement(r);
+			assertTrue(req.getRejectionReason() == Rejection.DUPLICATE);
+			assertEquals(req.getRejectionReasonString(), r.getRejection());
+			assertEquals(req.getRejectionReasonString(), "Duplicate");
+		}
+		catch (Exception e) {
+			fail();
+		}
+	}
+
+	/**
+	 * Test method for {@link edu.ncsu.csc216.tracker.requirement.Requirement#update(edu.ncsu.csc216.tracker.requirement.Command)}.
+	 */
+	@Test
+	public void testUpdate() {
+		//Creates an initial Requirement
+		Requirement r = new Requirement("Submitted", "summary");
+		assertEquals(r.getState().getStateName(), "Submitted");
+		//Creates commands to advance the Requirement
+		Command c1 = new Command(CommandValue.REJECT, null, null, 0, null, null, Rejection.TOO_LARGE);
+		Command accept = new Command (CommandValue.ACCEPT, "summary", "testid", 1, "estimate", null, null);
+		Command assign = new Command (CommandValue.ASSIGN, "summary", "testid", 1, "estimate", "zgiles", null);
+		Command complete = new Command (CommandValue.COMPLETE, "summary", "testid", 1, "estimate", "zgiles", null);
+		Command fail = new Command (CommandValue.FAIL, "summary", "testid", 2, "estimate", "zgiles", null);
+		Command pass = new Command (CommandValue.PASS, "summary", "testid", 1, "estimate", "zgiles", null);
+		Command reject = new Command (CommandValue.REJECT, "summary", "testid", 1, "estimate", "zgiles", Rejection.INAPPROPRIATE);
+		Command revise = new Command (CommandValue.REVISE, "new summary", "new testid", 1, "estimate", "zgiles", Rejection.OUT_OF_SCOPE);
+		r.update(c1);
+		assertEquals(r.getState().getStateName(), "Rejected");
+		r.update(assign);
+		assertEquals(r.getState().getStateName(), "Working");
+		r.update(complete);
+		assertEquals(r.getState().getStateName(), "Completed");
+		r.update(fail);
+		assertEquals(r.getState().getStateName(), "Working");
+		r.update(complete);
+		r.update(pass);
+		assertEquals(r.getState().getStateName(), "Verified");
+		r.update(reject);
+		assertEquals(r.getState().getStateName(), "Rejected");
+		assertEquals(r.getRejectionReason(), Rejection.INAPPROPRIATE);
+		assertEquals(r.getRejectionReasonString(), "Inappropriate");
+		r.update(revise);
+		assertEquals(r.getState().getStateName(), "Submitted");
+		assertEquals(r.getRejectionReason(), Rejection.OUT_OF_SCOPE);
+		assertEquals(r.getRejectionReasonString(), "Out of Scope");
+		Command reject1 = new Command (CommandValue.REJECT, "summary", "testid", 1, "estimate", "zgiles", Rejection.INFEASIBLE);
+		r.update(reject1);
+		assertEquals(r.getRejectionReason(), Rejection.INFEASIBLE);
+		assertEquals(r.getRejectionReasonString(), "Infeasible");
+		r.update(revise);
+		assertEquals(r.getSummary(), "new summary");
+		assertEquals(r.getAcceptanceTestId(), "new testid");
+		assertEquals(r.getState().getStateName(), "Submitted");
+		Command reject2 = new Command (CommandValue.REJECT, "summary", "testid", 1, "estimate", "zgiles", Rejection.OUT_OF_SCOPE);
+		r.update(reject2);
+		assertEquals(r.getRejectionReason(), Rejection.OUT_OF_SCOPE);
+		assertEquals(r.getRejectionReasonString(), "Out of Scope");
+		r.update(revise);
+		Command reject3 = new Command (CommandValue.REJECT, "summary", "testid", 1, "estimate", "zgiles", Rejection.TOO_LARGE);
+		r.update(reject3);
+		assertEquals(r.getRejectionReason(), Rejection.TOO_LARGE);
+		assertEquals(r.getRejectionReasonString(), "Too large");
+		Command badCommand = new Command(CommandValue.REJECT, null, null, 0, null, null, Rejection.INFEASIBLE);
+		try {
+			r.update(badCommand);
+			fail();
+		}
+		catch (UnsupportedOperationException e) {
+			//requirement unchanged
+			assertEquals(r.getRejectionReasonString(), "Too large");
+		}
+	}
+
+	/**
+	 * Test method for {@link edu.ncsu.csc216.tracker.requirement.Requirement#getXMLReq()}.
+	 */
+	@Test
+	public void testGetXMLReq() {
+		try {
+			//Create a Requirement to turn into an XML Req
+			RequirementsReader io = new RequirementsReader("test_files/req1.xml");
+			Req r1 = io.getReqs().get(5);
+			Requirement requirement = new Requirement(r1);
+			Req r2 = requirement.getXMLReq();
+			assertTrue(r1.getDeveloper().equals(r2.getDeveloper()));
+		}
+		catch (RequirementIOException e) {
+			fail();
+		}
+	}
+
+}

@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package edu.ncsu.csc216.tracker.requirement;
+
+/**
+ * @author zachs
+ *
+ */
+public class AcceptedState implements RequirementState {
+
+	@Override
+	public String getStateName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

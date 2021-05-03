@@ -1,0 +1,39 @@
+import java.util.*;
+import java.io.*;
+/**
+ *INSERT PROJECT DESCRIPTION
+ *
+ * @author Zach Giles
+ *
+ * @version 01Mar2020
+ */
+public class OneSpace {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        userInterface();
+
+    }
+    
+    public static void userInterface() {
+        Scanner console = new Scanner(System.in);
+        Scanner userInputFile = getInput(console);
+        Scanner userOutputFile = getOutput(console);
+        
+    }
+    
+    public static Scanner getInput(Scanner console) {
+        Scanner userInputFile = null;
+        while (userInputFile == null) {
+            System.out.print("Enter the input file you want to read: ");
+            try {
+                userInputFile = new Scanner(new File(console.next()));
+            }
+        }
+    }
+    
+    
+
+}

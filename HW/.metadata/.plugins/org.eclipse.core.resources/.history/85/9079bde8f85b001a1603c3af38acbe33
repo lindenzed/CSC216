@@ -1,0 +1,69 @@
+import java.util.*;
+import java.io.*;
+/**
+ *INSERT PROJECT DESCRIPTION
+ *
+ * @author Zach Giles
+ *
+ * @version 01Mar2020
+ */
+public class OneSpace {
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        userInterface();
+
+    }
+    
+    public static void userInterface() {
+        Scanner console = new Scanner(System.in);
+        Scanner userInputFile = getInput(console);
+        PrintStream userOutputFile = getOutput(console);
+        userInputFile.close();
+        userOutputFile.close();
+    }
+    
+    public static Scanner getInput(Scanner console) {
+        Scanner userInputFile = null;
+        while (userInputFile == null) {
+            System.out.print("Enter the input file you want to read: ");
+            try {
+                userInputFile = new Scanner(new File(console.next()));
+            }
+            catch (FileNotFoundException e) {
+                System.out.print("File not found! Exiting program! ");
+                System.exit(1);
+            }
+        }
+        return userInputFile;
+        }
+    
+    public static PrintStream getOutput(Scanner console) {
+        PrintStream userOutputFile = null;
+        while (userOutputFile == null) {
+            System.out.print("Enter the filename of for the output: ");
+            try {
+                userOutputFile = new PrintStream(new File(console.next()));
+            }
+            catch (FileNotFoundException e) {
+                System.out.print("File not avaialbe to be written to! Exiting program!");
+                System.exit(1);
+            }
+        }
+        return userOutputFile;
+    }
+    
+    public static void collapseSpaces(Scanner userInputFile, PrintStream userOutputFile) {
+        while (userInputFile.hasNextLine()) {
+            String line = userInputFile.nextLine();
+            Scanner lineScanner = new Scanner(line);
+            while (lineScanner.hasNext()) {
+                userOutputFile.print(lineScanner.next() + " ");
+            }
+            lineScanner.close();
+            userOutputFile.println();
+        }
+    }
+}
